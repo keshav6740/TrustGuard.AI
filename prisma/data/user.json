@@ -1,0 +1,74 @@
+{
+    "user_profiles": [
+        {
+            "user_id": "user_3",
+            "username": "Tara",
+            "join_date": "2021-09-15",
+            "total_reviews": 35,
+            "trust_score": 0.54
+        },
+        {
+            "user_id": "user_9",
+            "username": "Myra",
+            "join_date": "2024-06-26",
+            "total_reviews": 5,
+            "trust_score": 0.11
+        },
+        {
+            "user_id": "user_7",
+            "username": "Arjun",
+            "join_date": "2020-07-18",
+            "total_reviews": 4,
+            "trust_score": 0.30
+        },
+        {
+            "user_id": "user_5",
+            "username": "Aadhya",
+            "join_date": "2023-02-17",
+            "total_reviews": 1,
+            "trust_score": 0.09
+        },
+        {
+            "user_id": "user_2",
+            "username": "Anaya",
+            "join_date": "2021-12-13",
+            "total_reviews": 49,
+            "trust_score": 0.90
+        },
+        {
+            "user_id": "user_1",
+            "username": "Aditya",
+            "join_date": "2023-10-08",
+            "total_reviews": 17,
+            "trust_score": 0.64
+        },
+        {
+            "user_id": "user_10",
+            "username": "Rohan",
+            "join_date": "2024-10-06",
+            "total_reviews": 27,
+            "trust_score": 0.41
+        },
+        {
+            "user_id": "user_4",
+            "username": "Saanvi",
+            "join_date": "2022-03-09",
+            "total_reviews": 33,
+            "trust_score": 0.36
+        },
+        {
+            "user_id": "user_6",
+            "username": "Vihaan",
+            "join_date": "2023-08-06",
+            "total_reviews": 3,
+            "trust_score": 0.63
+        },
+        {
+            "user_id": "user_8",
+            "username": "Aarav",
+            "join_date": "2020-11-05",
+            "total_reviews": 39,
+            "trust_score": 0.54
+        }
+    ]
+}

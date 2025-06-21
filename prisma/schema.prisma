@@ -1,0 +1,87 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            Int      @id @default(autoincrement())
+  user_id_str   String   @unique @map("user_id_string") // Original user_id from json
+  username      String
+  join_date     DateTime
+  total_reviews Int
+  trust_score   Float
+  reviews       Review[]
+
+  @@map("users")
+}
+
+model Seller {
+  id             Int       @id @default(autoincrement())
+  seller_id_str  String    @unique @map("seller_id_string") // Original seller_id from json
+  seller_name    String    @unique
+  total_products Int
+  trust_score    Float
+  is_verified    Boolean
+  products       Product[]
+
+  @@map("sellers")
+}
+
+model Product {
+  id                     Int       @id @default(autoincrement())
+  product_no             Int       @unique // From Item.json
+  category               String
+  title                  String
+  average_rating         Float?
+  rating_number          Int?      @map("reviews_count") // Renamed for clarity
+  description            String[]  // Array of strings from Item.json
+  price                  Float
+  store_seller_name      String    @map("seller_name_from_json") // Temp field for seeding, seller_name from Item.json
+  details                Json?     // From Item.json
+  verified_product       Boolean
+  review_summary         String?
+  fake_review_percentage Float?
+
+  // Fields for frontend compatibility, to be populated from Item.json or placeholders
+  image_url              String?
+  thumbnail_urls         String[]  @default([])
+  sizes                  String[]  @default([]) // Assuming sizes could be added
+  shipping_info          Json?     // Assuming shipping info could be added as JSON
+
+  sellerId Int?
+  seller   Seller? @relation(fields: [sellerId], references: [id])
+
+  reviews Review[]
+
+  @@map("products")
+}
+
+model Review {
+  id                 Int      @id @default(autoincrement())
+  rating             Float
+  title              String?
+  text               String
+  product_no_ref     Int      // To link with Product.product_no during seed
+  user_id_str_ref    String   // To link with User.user_id_str during seed
+  verified_purchase  Boolean
+  helpful_vote       Int
+  legitimacy_score   Float?
+  spam_flag          Boolean?
+  ai_analysis        String?
+  time               DateTime // From reviews.json 'Time' field
+
+  productId Int?
+  product   Product? @relation(fields: [productId], references: [id])
+
+  userId Int?
+  user   User? @relation(fields: [userId], references: [id])
+
+  @@map("reviews")
+}

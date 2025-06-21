@@ -1,0 +1,326 @@
+{
+  "sellers": [
+    {
+      "seller_id": "seller_1",
+      "seller_name": "TechWorld India",
+      "total_products": 1,
+      "trust_score": 91,
+      "is_verified": true
+    },
+    {
+      "seller_id": "seller_2",
+      "seller_name": "Apple Store Official",
+      "total_products": 1,
+      "trust_score": 97,
+      "is_verified": true
+    },
+    {
+      "seller_id": "seller_3",
+      "seller_name": "AudioHub",
+      "total_products": 1,
+      "trust_score": 82,
+      "is_verified": false
+    },
+    {
+      "seller_id": "seller_4",
+      "seller_name": "ElectroMart",
+      "total_products": 2,
+      "trust_score": 79,
+      "is_verified": false
+    },
+    {
+      "seller_id": "seller_5",
+      "seller_name": "PhotoPro India",
+      "total_products": 1,
+      "trust_score": 87,
+      "is_verified": true
+    },
+    {
+      "seller_id": "seller_6",
+      "seller_name": "Dell Official Store",
+      "total_products": 1,
+      "trust_score": 84,
+      "is_verified": false
+    },
+    {
+      "seller_id": "seller_7",
+      "seller_name": "SoundZone",
+      "total_products": 1,
+      "trust_score": 74,
+      "is_verified": false
+    },
+    {
+      "seller_id": "seller_8",
+      "seller_name": "Fashion Hub",
+      "total_products": 2,
+      "trust_score": 75,
+      "is_verified": true
+    },
+    {
+      "seller_id": "seller_9",
+      "seller_name": "SportStyle",
+      "total_products": 3,
+      "trust_score": 89,
+      "is_verified": false
+    },
+    {
+      "seller_id": "seller_10",
+      "seller_name": "Zara Official",
+      "total_products": 1,
+      "trust_score": 93,
+      "is_verified": true
+    },
+    {
+      "seller_id": "seller_11",
+      "seller_name": "Eyewear Pro",
+      "total_products": 1,
+      "trust_score": 88,
+      "is_verified": true
+    },
+    {
+      "seller_id": "seller_12",
+      "seller_name": "KitchenWorld",
+      "total_products": 3,
+      "trust_score": 90,
+      "is_verified": true
+    },
+    {
+      "seller_id": "seller_13",
+      "seller_name": "HomeEssentials",
+      "total_products": 3,
+      "trust_score": 73,
+      "is_verified": false
+    },
+    {
+      "seller_id": "seller_14",
+      "seller_name": "IKEA India",
+      "total_products": 2,
+      "trust_score": 95,
+      "is_verified": true
+    },
+    {
+      "seller_id": "seller_15",
+      "seller_name": "BeautyBazaar",
+      "total_products": 3,
+      "trust_score": 92,
+      "is_verified": true
+    },
+    {
+      "seller_id": "seller_16",
+      "seller_name": "HealthPlus",
+      "total_products": 1,
+      "trust_score": 70,
+      "is_verified": false
+    },
+    {
+      "seller_id": "seller_17",
+      "seller_name": "NaturalCare",
+      "total_products": 3,
+      "trust_score": 85,
+      "is_verified": false
+    },
+    {
+      "seller_id": "seller_18",
+      "seller_name": "LuxuryBeauty",
+      "total_products": 1,
+      "trust_score": 98,
+      "is_verified": true
+    },
+    {
+      "seller_id": "seller_19",
+      "seller_name": "ToyLand",
+      "total_products": 3,
+      "trust_score": 89,
+      "is_verified": true
+    },
+    {
+      "seller_id": "seller_20",
+      "seller_name": "KidsZone",
+      "total_products": 2,
+      "trust_score": 77,
+      "is_verified": false
+    },
+    {
+      "seller_id": "seller_21",
+      "seller_name": "GameWorld",
+      "total_products": 1,
+      "trust_score": 80,
+      "is_verified": false
+    },
+    {
+      "seller_id": "seller_22",
+      "seller_name": "PuzzleMaster",
+      "total_products": 1,
+      "trust_score": 76,
+      "is_verified": false
+    },
+    {
+      "seller_id": "seller_23",
+      "seller_name": "BookHaven",
+      "total_products": 2,
+      "trust_score": 94,
+      "is_verified": true
+    },
+    {
+      "seller_id": "seller_24",
+      "seller_name": "KnowledgeCorner",
+      "total_products": 2,
+      "trust_score": 88,
+      "is_verified": false
+    },
+    {
+      "seller_id": "seller_25",
+      "seller_name": "ClassicBooks",
+      "total_products": 1,
+      "trust_score": 91,
+      "is_verified": false
+    },
+    {
+      "seller_id": "seller_26",
+      "seller_name": "EducationalBooks",
+      "total_products": 1,
+      "trust_score": 85,
+      "is_verified": false
+    },
+    {
+      "seller_id": "seller_27",
+      "seller_name": "ComicWorld",
+      "total_products": 1,
+      "trust_score": 80,
+      "is_verified": false
+    },
+    {
+      "seller_id": "seller_28",
+      "seller_name": "FitnessGear",
+      "total_products": 2,
+      "trust_score": 81,
+      "is_verified": false
+    },
+    {
+      "seller_id": "seller_29",
+      "seller_name": "SportEquip",
+      "total_products": 1,
+      "trust_score": 79,
+      "is_verified": false
+    },
+    {
+      "seller_id": "seller_30",
+      "seller_name": "YogaWorld",
+      "total_products": 1,
+      "trust_score": 83,
+      "is_verified": true
+    },
+    {
+      "seller_id": "seller_31",
+      "seller_name": "TechFitness",
+      "total_products": 1,
+      "trust_score": 92,
+      "is_verified": true
+    },
+    {
+      "seller_id": "seller_32",
+      "seller_name": "RacketSports",
+      "total_products": 1,
+      "trust_score": 78,
+      "is_verified": false
+    },
+    {
+      "seller_id": "seller_33",
+      "seller_name": "BabyCare Plus",
+      "total_products": 2,
+      "trust_score": 84,
+      "is_verified": true
+    },
+    {
+      "seller_id": "seller_34",
+      "seller_name": "MotherCare",
+      "total_products": 2,
+      "trust_score": 90,
+      "is_verified": true
+    },
+    {
+      "seller_id": "seller_35",
+      "seller_name": "TinyTots",
+      "total_products": 2,
+      "trust_score": 71,
+      "is_verified": false
+    },
+    {
+      "seller_id": "seller_36",
+      "seller_name": "FreshMart",
+      "total_products": 2,
+      "trust_score": 87,
+      "is_verified": true
+    },
+    {
+      "seller_id": "seller_37",
+      "seller_name": "QuickGrocery",
+      "total_products": 1,
+      "trust_score": 73,
+      "is_verified": false
+    },
+    {
+      "seller_id": "seller_38",
+      "seller_name": "DairyFresh",
+      "total_products": 1,
+      "trust_score": 95,
+      "is_verified": true
+    },
+    {
+      "seller_id": "seller_39",
+      "seller_name": "SnackTime",
+      "total_products": 1,
+      "trust_score": 69,
+      "is_verified": true
+    },
+    {
+      "seller_id": "seller_40",
+      "seller_name": "IndianSnacks",
+      "total_products": 1,
+      "trust_score": 68,
+      "is_verified": false
+    },
+    {
+      "seller_id": "seller_41",
+      "seller_name": "OfficeFurniture",
+      "total_products": 1,
+      "trust_score": 85,
+      "is_verified": true
+    },
+    {
+      "seller_id": "seller_42",
+      "seller_name": "UrbanLadder",
+      "total_products": 1,
+      "trust_score": 93,
+      "is_verified": true
+    },
+    {
+      "seller_id": "seller_43",
+      "seller_name": "LightingWorld",
+      "total_products": 1,
+      "trust_score": 74,
+      "is_verified": false
+    },
+    {
+      "seller_id": "seller_44",
+      "seller_name": "HomeTextiles",
+      "total_products": 1,
+      "trust_score": 77,
+      "is_verified": false
+    },
+    {
+      "seller_id": "seller_45",
+      "seller_name": "DecorItems",
+      "total_products": 1,
+      "trust_score": 81,
+      "is_verified": false
+    },
+    {
+      "seller_id": "seller_46",
+      "seller_name": "CookingEssentials",
+      "total_products": 1,
+      "trust_score": 80,
+      "is_verified": false
+    }
+  ]
+}
