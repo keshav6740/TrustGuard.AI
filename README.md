@@ -116,7 +116,7 @@ The platform aims to detect and flag fraudulent activities, counterfeit products
 
 ---
 
-## 💡 Future Improvements (Conceptual - aligns with Hackathon Slides)
+## 💡 Future Improvements (Conceptual)
 
 *   **Real AI Model Integration:** Replace heuristic-based analyses with actual trained ML models for fraud, counterfeit, and fake review detection (e.g., using services like AWS SageMaker, Rekognition, Comprehend, or custom models).
 *   **Advanced Graph Analysis:** Implement GNNs (e.g., with Amazon Neptune) for detecting review collusion rings.
