@@ -1,17 +1,15 @@
 // src/lib/prisma.js
 import { PrismaClient } from '@prisma/client';
 
-let prisma;
+let prismaInstance; // Renamed to avoid confusion with global `prisma` if any
 
 if (process.env.NODE_ENV === 'production') {
-  prisma = new PrismaClient();
+  prismaInstance = new PrismaClient();
 } else {
-  // Ensure global.prisma is correctly typed in TypeScript if you switch later
-  // For JavaScript, this is fine.
-  if (!global.prisma) {
-    global.prisma = new PrismaClient();
+  if (!global._prismaInstance) { // Use a more unique global variable name
+    global._prismaInstance = new PrismaClient();
   }
-  prisma = global.prisma;
+  prismaInstance = global._prismaInstance;
 }
 
-export default prisma;
+export default prismaInstance;

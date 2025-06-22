@@ -1,329 +1,2839 @@
 {
-  "user_reviews": [
+  "reviews": [
     {
-      "rating": 5.0,
-      "title": "Amazing smartphone with great camera",
-      "text": "I've been using this Samsung Galaxy A54 for 3 months now and I'm thoroughly impressed. The 108MP camera takes stunning photos even in low light conditions. The 5000mAh battery easily lasts a full day of heavy usage. The 6.4-inch Super AMOLED display is vibrant and clear. Highly recommended for anyone looking for a premium 5G experience without breaking the bank.",
+      "title": "Excellent flagship",
+      "text": "The S23 Ultra is an absolute beast. The camera quality is phenomenal and the S Pen integration is seamless. Battery life could be better though.",
       "product_no": 1001,
       "user_id": "user_1",
-      "verified_purchase": true,
-      "helpful_vote": 23,
-      "legitimacy_score": 0.92,
-      "spam_flag": false,
-      "ai_analysis": "Detailed authentic review with specific product features",
-      "Time": "15/03/25 2:30 pm"
+      "review_id": 1,
+      "helpful_vote": 15,
+      "date_time": "15/03/23 [02.45 pm]"
     },
     {
-      "rating": 4.0,
-      "title": "Good phone but charging could be faster",
-      "text": "The Samsung Galaxy A54 is a solid mid-range phone. Camera quality is excellent for the price point and the display is beautiful. However, the charging speed is slower than expected - takes about 2 hours to fully charge. Overall satisfied with the purchase.",
+      "title": "Overpriced but good",
+      "text": "Great phone but not worth the premium price. The 200MP camera is impressive but I expected better low-light performance.",
       "product_no": 1001,
       "user_id": "user_2",
-      "verified_purchase": true,
-      "helpful_vote": 15,
-      "legitimacy_score": 0.88,
-      "spam_flag": false,
-      "ai_analysis": "Balanced review mentioning both pros and cons",
-      "Time": "18/03/25 7:45 am"
+      "review_id": 2,
+      "helpful_vote": 8,
+      "date_time": "22/03/23 [11.30 am]"
     },
     {
-      "rating": 2.0,
-      "title": "Overpriced for what it offers",
-      "text": "Expected much more from Samsung at this price point. The phone feels plasticky and the performance is laggy when running multiple apps. Battery drains faster than advertised. Would not recommend, better options available at this price.",
+      "title": "Best Android phone",
+      "text": "After using for a month, I can confidently say this is the best Android device available. The display is stunning and performance is flawless.",
       "product_no": 1001,
-      "user_id": "user_8",
-      "verified_purchase": false,
-      "helpful_vote": 3,
-      "legitimacy_score": 0.65,
-      "spam_flag": false,
-      "ai_analysis": "Negative review with generic complaints",
-      "Time": "20/03/25 11:20 am"
+      "user_id": "user_3",
+      "review_id": 3,
+      "helpful_vote": 18,
+      "date_time": "05/04/23 [09.15 am]"
     },
     {
-      "rating": 5.0,
-      "title": "Excellent build quality and performance",
-      "text": "This MacBook Air M2 is a game changer for my work productivity. The M2 chip handles video editing and multiple applications effortlessly. The 18-hour battery life claim is accurate - I can work all day without needing to charge. The Liquid Retina display is crisp and the build quality feels premium. Worth every penny for professionals.",
+      "title": "Too big and heavy",
+      "text": "The phone is too large for comfortable one-handed use. Camera bumps make it wobble on flat surfaces. Good specs but poor ergonomics.",
+      "product_no": 1001,
+      "user_id": "user_4",
+      "review_id": 4,
+      "helpful_vote": 12,
+      "date_time": "12/04/23 [04.20 pm]"
+    },
+    {
+      "title": "Worth every penny",
+      "text": "As a photographer, I appreciate the camera versatility. The zoom capabilities are unmatched and the color accuracy is perfect.",
+      "product_no": 1001,
+      "user_id": "user_5",
+      "review_id": 5,
+      "helpful_vote": 20,
+      "date_time": "18/04/23 [01.10 pm]"
+    },
+    {
+      "title": "Great value flagship",
+      "text": "OnePlus continues to deliver premium features at competitive prices. The Hasselblad camera produces natural colors and the charging is incredibly fast.",
       "product_no": 1002,
       "user_id": "user_1",
-      "verified_purchase": true,
-      "helpful_vote": 31,
-      "legitimacy_score": 0.95,
-      "spam_flag": false,
-      "ai_analysis": "Comprehensive review from verified professional user",
-      "Time": "22/03/25 4:15 pm"
+      "review_id": 6,
+      "helpful_vote": 14,
+      "date_time": "20/03/23 [10.45 am]"
     },
     {
-      "rating": 4.0,
-      "title": "Great laptop but expensive",
-      "text": "MacBook Air M2 delivers on performance and battery life. The M2 chip is incredibly fast and the fanless design keeps it silent. However, the price is quite steep and the limited port selection requires dongles. Great for Mac ecosystem users.",
+      "title": "Software issues",
+      "text": "Hardware is excellent but OxygenOS has become buggy after the recent update. Battery drain issues and occasional lag.",
+      "product_no": 1002,
+      "user_id": "user_2",
+      "review_id": 7,
+      "helpful_vote": 9,
+      "date_time": "25/03/23 [03.30 pm]"
+    },
+    {
+      "title": "Perfect mid-range",
+      "text": "For the price, this phone offers everything you need. The AMOLED display is gorgeous and performance handles all tasks smoothly.",
       "product_no": 1002,
       "user_id": "user_3",
-      "verified_purchase": true,
-      "helpful_vote": 18,
-      "legitimacy_score": 0.89,
-      "spam_flag": false,
-      "ai_analysis": "Honest review mentioning price concerns",
-      "Time": "25/03/25 9:30 am"
+      "review_id": 8,
+      "helpful_vote": 16,
+      "date_time": "08/04/23 [11.20 am]"
     },
     {
-      "rating": 1.0,
-      "title": "Overpriced Apple tax",
-      "text": "Way too expensive for what you get. Windows laptops offer better specs at half the price. Apple is just charging premium for the brand name. Not worth it.",
+      "title": "Average camera",
+      "text": "Camera performance is good but not great. Low light photos have noticeable noise. Video stabilization could be better.",
       "product_no": 1002,
-      "user_id": "user_9",
-      "verified_purchase": false,
-      "helpful_vote": 2,
-      "legitimacy_score": 0.58,
-      "spam_flag": true,
-      "ai_analysis": "Generic brand criticism without specific product details",
-      "Time": "26/03/25 1:45 pm"
+      "user_id": "user_4",
+      "review_id": 9,
+      "helpful_vote": 7,
+      "date_time": "15/04/23 [05.45 pm]"
     },
     {
-      "rating": 5.0,
-      "title": "Best noise cancellation I've experienced",
-      "text": "Sony WH-1000XM5 headphones are absolutely phenomenal. The noise cancellation blocks out airplane engines completely. Sound quality is audiophile-grade with deep bass and clear highs. 30-hour battery life is impressive. Comfortable for long listening sessions. These have ruined other headphones for me!",
+      "title": "Best in segment",
+      "text": "Compared to competitors, this offers the best combination of performance, camera and charging speed. Highly recommended!",
+      "product_no": 1002,
+      "user_id": "user_5",
+      "review_id": 10,
+      "helpful_vote": 19,
+      "date_time": "22/04/23 [02.15 pm]"
+    },
+    {
+      "title": "Apple perfection",
+      "text": "The Dynamic Island is innovative and useful. Battery life is excellent and the camera system produces professional quality photos.",
+      "product_no": 1003,
+      "user_id": "user_1",
+      "review_id": 11,
+      "helpful_vote": 17,
+      "date_time": "18/03/23 [09.30 am]"
+    },
+    {
+      "title": "Overheating issues",
+      "text": "Phone gets uncomfortably hot during extended camera use or gaming. The stainless steel frame doesn't help with heat dissipation.",
       "product_no": 1003,
       "user_id": "user_2",
-      "verified_purchase": true,
-      "helpful_vote": 28,
-      "legitimacy_score": 0.94,
-      "spam_flag": false,
-      "ai_analysis": "Enthusiastic review with specific technical details",
-      "Time": "28/03/25 6:20 pm"
+      "review_id": 12,
+      "helpful_vote": 11,
+      "date_time": "24/03/23 [04.15 pm]"
     },
     {
-      "rating": 4.0,
-      "title": "Excellent sound, comfortable fit",
-      "text": "Really impressed with the sound quality and noise cancellation. Very comfortable to wear for hours. The touch controls take some getting used to but work well once you learn them. Highly recommend for frequent travelers.",
+      "title": "Worth the upgrade",
+      "text": "Coming from iPhone 12, the 120Hz display and camera improvements are immediately noticeable. iOS ecosystem remains unmatched.",
+      "product_no": 1003,
+      "user_id": "user_3",
+      "review_id": 13,
+      "helpful_vote": 20,
+      "date_time": "03/04/23 [01.45 pm]"
+    },
+    {
+      "title": "Expensive but worth it",
+      "text": "Yes it's pricey, but you're getting the best smartphone experience available. The build quality and software optimization are exceptional.",
       "product_no": 1003,
       "user_id": "user_4",
-      "verified_purchase": true,
-      "helpful_vote": 12,
-      "legitimacy_score": 0.86,
-      "spam_flag": false,
-      "ai_analysis": "Positive review highlighting key features",
-      "Time": "30/03/25 10:15 am"
+      "review_id": 14,
+      "helpful_vote": 15,
+      "date_time": "10/04/23 [10.30 am]"
     },
     {
-      "rating": 3.0,
-      "title": "Good but not great for the price",
-      "text": "Sound quality is decent but not exceptional at this price point. Noise cancellation works but I've used better. Battery life is good. Expected more from Sony at this premium price range.",
+      "title": "Notch replacement is worse",
+      "text": "Dynamic Island is more distracting than the notch. Many apps don't support it properly yet. Hardware is great but software needs refinement.",
       "product_no": 1003,
-      "user_id": "user_6",
-      "verified_purchase": true,
+      "user_id": "user_5",
+      "review_id": 15,
       "helpful_vote": 8,
-      "legitimacy_score": 0.79,
-      "spam_flag": false,
-      "ai_analysis": "Moderate review with realistic expectations",
-      "Time": "02/04/25 3:45 pm"
+      "date_time": "17/04/23 [03.20 pm]"
     },
     {
-      "rating": 4.0,
-      "title": "Perfect fit, great quality denim",
-      "text": "These Levi's 511 jeans fit exactly as expected. The slim fit is flattering without being too tight. Denim quality feels premium and the dark blue color looks great. True to size as always with Levi's. Will definitely buy more colors.",
+      "title": "Budget king",
+      "text": "For the price, you can't get better specs. The 108MP camera takes surprisingly good photos and the AMOLED display is a rare find at this price.",
+      "product_no": 1004,
+      "user_id": "user_1",
+      "review_id": 16,
+      "helpful_vote": 14,
+      "date_time": "22/03/23 [11.45 am]"
+    },
+    {
+      "title": "MIUI bloatware",
+      "text": "Hardware is good but the software experience is ruined by excessive ads and bloatware. Had to spend hours debloating the phone.",
+      "product_no": 1004,
+      "user_id": "user_2",
+      "review_id": 17,
+      "helpful_vote": 12,
+      "date_time": "28/03/23 [05.30 pm]"
+    },
+    {
+      "title": "Excellent battery life",
+      "text": "Lasts a full day with heavy use thanks to the efficient processor. 67W charging means it tops up in under 45 minutes.",
+      "product_no": 1004,
+      "user_id": "user_3",
+      "review_id": 18,
+      "helpful_vote": 16,
+      "date_time": "06/04/23 [02.15 pm]"
+    },
+    {
+      "title": "Average performance",
+      "text": "Stutters occasionally when multitasking. Gaming performance is just okay - some heavy games drop frames.",
+      "product_no": 1004,
+      "user_id": "user_4",
+      "review_id": 19,
+      "helpful_vote": 7,
+      "date_time": "13/04/23 [10.45 am]"
+    },
+    {
+      "title": "Best under 25k",
+      "text": "Compared to competitors in this range, the Note 12 Pro offers the best display and charging speed. Camera is decent in good light.",
+      "product_no": 1004,
+      "user_id": "user_5",
+      "review_id": 20,
+      "helpful_vote": 18,
+      "date_time": "20/04/23 [04.30 pm]"
+    },
+    {
+      "title": "Stylish and fast",
+      "text": "The curved AMOLED display looks premium and the 100W charging is incredibly convenient. Performance is smooth for daily tasks.",
+      "product_no": 1005,
+      "user_id": "user_1",
+      "review_id": 21,
+      "helpful_vote": 13,
+      "date_time": "25/03/23 [09.15 am]"
+    },
+    {
+      "title": "Mediocre cameras",
+      "text": "Photos look washed out and lack detail. The camera software processing is too aggressive, resulting in unnatural colors.",
+      "product_no": 1005,
+      "user_id": "user_2",
+      "review_id": 22,
+      "helpful_vote": 9,
+      "date_time": "30/03/23 [03.45 pm]"
+    },
+    {
+      "title": "Great for students",
+      "text": "Perfect balance of price and performance for college students. Handles social media, streaming and light gaming without issues.",
+      "product_no": 1005,
+      "user_id": "user_3",
+      "review_id": 23,
+      "helpful_vote": 15,
+      "date_time": "08/04/23 [12.30 pm]"
+    },
+    {
+      "title": "Software bugs",
+      "text": "Faces random reboots and app crashes. Realme UI needs more optimization. Hardware is good but software ruins the experience.",
+      "product_no": 1005,
+      "user_id": "user_4",
+      "review_id": 24,
+      "helpful_vote": 6,
+      "date_time": "15/04/23 [05.15 pm]"
+    },
+    {
+      "title": "Value for money",
+      "text": "You get premium features like curved AMOLED and fast charging at a budget price. Can't ask for more at this price point.",
+      "product_no": 1005,
+      "user_id": "user_5",
+      "review_id": 25,
+      "helpful_vote": 17,
+      "date_time": "22/04/23 [02.45 pm]"
+    },
+    {
+      "title": "Sleek and stylish",
+      "text": "One of the best looking phones in this segment. The slim design and color options make it stand out. Performance is decent too.",
+      "product_no": 1006,
+      "user_id": "user_1",
+      "review_id": 26,
+      "helpful_vote": 12,
+      "date_time": "28/03/23 [10.30 am]"
+    },
+    {
+      "title": "Average battery life",
+      "text": "With moderate use, barely lasts a full day. The 44W charging helps but competitors offer better battery optimization.",
+      "product_no": 1006,
+      "user_id": "user_2",
+      "review_id": 27,
+      "helpful_vote": 8,
+      "date_time": "03/04/23 [04.45 pm]"
+    },
+    {
+      "title": "Good cameras",
+      "text": "The OIS makes a noticeable difference in low light photos. Portrait mode edge detection is surprisingly accurate.",
+      "product_no": 1006,
+      "user_id": "user_3",
+      "review_id": 28,
+      "helpful_vote": 14,
+      "date_time": "10/04/23 [01.15 pm]"
+    },
+    {
+      "title": "Overpriced",
+      "text": "Compared to similar spec'd phones from Xiaomi and Realme, this doesn't offer enough to justify the higher price.",
+      "product_no": 1006,
+      "user_id": "user_4",
+      "review_id": 29,
+      "helpful_vote": 7,
+      "date_time": "17/04/23 [11.45 am]"
+    },
+    {
+      "title": "Reliable performer",
+      "text": "Been using for 3 months without any issues. Software is stable and the phone feels premium in hand. Good mid-range option.",
+      "product_no": 1006,
+      "user_id": "user_5",
+      "review_id": 30,
+      "helpful_vote": 16,
+      "date_time": "24/04/23 [03.30 pm]"
+    },
+    {
+      "title": "Clean Android experience",
+      "text": "Refreshing to use a phone without bloatware. The near-stock Android runs buttery smooth and the display is excellent.",
+      "product_no": 1007,
+      "user_id": "user_1",
+      "review_id": 31,
+      "helpful_vote": 15,
+      "date_time": "02/04/23 [09.45 am]"
+    },
+    {
+      "title": "Average cameras",
+      "text": "Photos lack detail in challenging lighting. The camera software needs improvement - colors often look unnatural.",
+      "product_no": 1007,
+      "user_id": "user_2",
+      "review_id": 32,
+      "helpful_vote": 9,
+      "date_time": "07/04/23 [05.30 pm]"
+    },
+    {
+      "title": "Great for gaming",
+      "text": "The 144Hz display makes games look incredibly smooth. Doesn't heat up much even during extended gaming sessions.",
+      "product_no": 1007,
+      "user_id": "user_3",
+      "review_id": 33,
+      "helpful_vote": 17,
+      "date_time": "14/04/23 [02.15 pm]"
+    },
+    {
+      "title": "Battery could be better",
+      "text": "With the 144Hz display enabled, battery drains quickly. Need to charge twice a day with heavy use.",
+      "product_no": 1007,
+      "user_id": "user_4",
+      "review_id": 34,
+      "helpful_vote": 10,
+      "date_time": "21/04/23 [10.30 am]"
+    },
+    {
+      "title": "Best mid-ranger",
+      "text": "Offers premium features like IP68 rating and wireless charging that competitors skip. Worth the extra money for these extras.",
+      "product_no": 1007,
+      "user_id": "user_5",
+      "review_id": 35,
+      "helpful_vote": 18,
+      "date_time": "28/04/23 [04.45 pm]"
+    },
+    {
+      "title": "Perfect laptop",
+      "text": "The M2 chip is insanely fast and battery life is incredible. The screen is gorgeous and the build quality is typical Apple perfection.",
       "product_no": 2001,
       "user_id": "user_1",
-      "verified_purchase": true,
-      "helpful_vote": 19,
-      "legitimacy_score": 0.91,
-      "spam_flag": false,
-      "ai_analysis": "Detailed fit and quality assessment",
-      "Time": "05/04/25 8:30 am"
+      "review_id": 36,
+      "helpful_vote": 20,
+      "date_time": "05/04/23 [11.15 am]"
     },
     {
-      "rating": 5.0,
-      "title": "Stylish and incredibly comfortable",
-      "text": "Love these Nike Air Max 270 sneakers! The Max Air unit provides amazing cushioning for walking and light running. The breathable mesh keeps feet cool. Style is on point and goes with everything. Best sneaker purchase I've made.",
+      "title": "Overpriced",
+      "text": "While the hardware is excellent, the price is hard to justify when you can get similar performance from Windows laptops for less.",
+      "product_no": 2001,
+      "user_id": "user_2",
+      "review_id": 37,
+      "helpful_vote": 12,
+      "date_time": "10/04/23 [05.45 pm]"
+    },
+    {
+      "title": "Best for creatives",
+      "text": "As a graphic designer, the color accuracy and performance are perfect for my work. Handles Photoshop and Illustrator without breaking a sweat.",
+      "product_no": 2001,
+      "user_id": "user_3",
+      "review_id": 38,
+      "helpful_vote": 19,
+      "date_time": "17/04/23 [02.30 pm]"
+    },
+    {
+      "title": "Limited ports",
+      "text": "Only having two USB-C ports is frustrating. Need to carry dongles everywhere. The MagSafe charging is convenient though.",
+      "product_no": 2001,
+      "user_id": "user_4",
+      "review_id": 39,
+      "helpful_vote": 14,
+      "date_time": "24/04/23 [10.15 am]"
+    },
+    {
+      "title": "Worth every penny",
+      "text": "The combination of performance, battery life and build quality makes this worth the premium. macOS runs flawlessly on the M2 chip.",
+      "product_no": 2001,
+      "user_id": "user_5",
+      "review_id": 40,
+      "helpful_vote": 20,
+      "date_time": "01/05/23 [03.45 pm]"
+    },
+    {
+      "title": "Gaming beast",
+      "text": "Handles all modern games at high settings without issues. The 144Hz display makes everything look smooth. Great value for gamers.",
+      "product_no": 2002,
+      "user_id": "user_1",
+      "review_id": 41,
+      "helpful_vote": 18,
+      "date_time": "08/04/23 [09.30 am]"
+    },
+    {
+      "title": "Gets hot under load",
+      "text": "Performance is good but the fans get very loud and the chassis gets uncomfortably hot during extended gaming sessions.",
+      "product_no": 2002,
+      "user_id": "user_2",
+      "review_id": 42,
+      "helpful_vote": 11,
+      "date_time": "13/04/23 [04.15 pm]"
+    },
+    {
+      "title": "Great for work and play",
+      "text": "Perfect balance between productivity and gaming. The 16GB RAM handles my development work and gaming needs without compromise.",
       "product_no": 2002,
       "user_id": "user_3",
-      "verified_purchase": true,
-      "helpful_vote": 25,
-      "legitimacy_score": 0.93,
-      "spam_flag": false,
-      "ai_analysis": "Enthusiastic review praising comfort and style",
-      "Time": "07/04/25 5:45 pm"
+      "review_id": 43,
+      "helpful_vote": 17,
+      "date_time": "20/04/23 [01.45 pm]"
     },
     {
-      "rating": 2.0,
-      "title": "Runs large, uncomfortable",
-      "text": "Ordered my usual size but these run at least a half size large. The mesh material feels cheap and the cushioning is overhyped. Not worth the premium price for Nike brand.",
+      "title": "Mediocre battery life",
+      "text": "Only lasts about 4 hours when gaming and 6-7 hours for normal use. Need to stay plugged in for serious gaming sessions.",
       "product_no": 2002,
-      "user_id": "user_7",
-      "verified_purchase": true,
-      "helpful_vote": 5,
-      "legitimacy_score": 0.72,
-      "spam_flag": false,
-      "ai_analysis": "Negative review mentioning sizing issues",
-      "Time": "10/04/25 12:15 pm"
+      "user_id": "user_4",
+      "review_id": 44,
+      "helpful_vote": 9,
+      "date_time": "27/04/23 [11.30 am]"
     },
     {
-      "rating": 5.0,
-      "title": "Cooks everything perfectly with less oil",
-      "text": "This Philips Air Fryer has revolutionized my cooking! The Rapid Air Technology creates crispy results with 80% less oil. The 4.1L capacity is perfect for family meals. Digital display makes it easy to use preset modes. Food tastes amazing and much healthier. Highly recommend!",
+      "title": "Best in this price range",
+      "text": "Compared to other gaming laptops at this price, the Victus offers the best combination of specs and build quality.",
+      "product_no": 2002,
+      "user_id": "user_5",
+      "review_id": 45,
+      "helpful_vote": 19,
+      "date_time": "04/05/23 [02.45 pm]"
+    },
+    {
+      "title": "Reliable workhorse",
+      "text": "Perfect for office work and browsing. The i5 processor is powerful enough for daily tasks and the build quality is solid.",
+      "product_no": 2003,
+      "user_id": "user_1",
+      "review_id": 46,
+      "helpful_vote": 15,
+      "date_time": "11/04/23 [10.15 am]"
+    },
+    {
+      "title": "Heavy and bulky",
+      "text": "The laptop is quite thick and heavy compared to modern ultrabooks. Not ideal for frequent travelers.",
+      "product_no": 2003,
+      "user_id": "user_2",
+      "review_id": 47,
+      "helpful_vote": 8,
+      "date_time": "16/04/23 [05.30 pm]"
+    },
+    {
+      "title": "Great value",
+      "text": "For the price, you get excellent specs including 16GB RAM and 512GB SSD. Performance is smooth for everyday computing.",
+      "product_no": 2003,
+      "user_id": "user_3",
+      "review_id": 48,
+      "helpful_vote": 16,
+      "date_time": "23/04/23 [02.45 pm]"
+    },
+    {
+      "title": "Average display",
+      "text": "The screen is decent but colors look washed out compared to more premium laptops. Brightness could be better for outdoor use.",
+      "product_no": 2003,
+      "user_id": "user_4",
+      "review_id": 49,
+      "helpful_vote": 7,
+      "date_time": "30/04/23 [12.30 pm]"
+    },
+    {
+      "title": "Dell quality",
+      "text": "Typical Dell reliability. The keyboard is comfortable for long typing sessions and the trackpad is responsive.",
+      "product_no": 2003,
+      "user_id": "user_5",
+      "review_id": 50,
+      "helpful_vote": 17,
+      "date_time": "07/05/23 [03.15 pm]"
+    },
+    {
+      "title": "Budget champion",
+      "text": "For basic computing needs, this is perfect. The Ryzen 5 offers good performance and the SSD makes the system feel snappy.",
+      "product_no": 2004,
+      "user_id": "user_1",
+      "review_id": 51,
+      "helpful_vote": 14,
+      "date_time": "14/04/23 [09.45 am]"
+    },
+    {
+      "title": "Only HD display",
+      "text": "The 1080p display would have been better at this price. Text isn't as sharp as FHD panels and colors look dull.",
+      "product_no": 2004,
+      "user_id": "user_2",
+      "review_id": 52,
+      "helpful_vote": 10,
+      "date_time": "19/04/23 [04.15 pm]"
+    },
+    {
+      "title": "Great for students",
+      "text": "My daughter uses this for online classes and homework. Performance is adequate and the price was right for our budget.",
+      "product_no": 2004,
+      "user_id": "user_3",
+      "review_id": 53,
+      "helpful_vote": 15,
+      "date_time": "26/04/23 [01.30 pm]"
+    },
+    {
+      "title": "Plastic feels cheap",
+      "text": "The chassis is all plastic and feels flimsy. Keyboard flexes noticeably during typing. Performance is okay but build could be better.",
+      "product_no": 2004,
+      "user_id": "user_4",
+      "review_id": 54,
+      "helpful_vote": 6,
+      "date_time": "03/05/23 [11.45 am]"
+    },
+    {
+      "title": "Surprisingly good",
+      "text": "For the price, I wasn't expecting much but this laptop handles my office work and media consumption perfectly fine.",
+      "product_no": 2004,
+      "user_id": "user_5",
+      "review_id": 55,
+      "helpful_vote": 16,
+      "date_time": "10/05/23 [02.30 pm]"
+    },
+    {
+      "title": "Slim and light",
+      "text": "Extremely portable with a surprisingly good keyboard. The i3 processor is adequate for web browsing and office work.",
+      "product_no": 2005,
+      "user_id": "user_1",
+      "review_id": 56,
+      "helpful_vote": 13,
+      "date_time": "17/04/23 [10.15 am]"
+    },
+    {
+      "title": "Underpowered",
+      "text": "The i3 processor struggles with multiple tabs and applications open. Should have gone for at least an i5 at this price.",
+      "product_no": 2005,
+      "user_id": "user_2",
+      "review_id": 57,
+      "helpful_vote": 9,
+      "date_time": "22/04/23 [05.30 pm]"
+    },
+    {
+      "title": "Good display",
+      "text": "The FHD screen is crisp and colors are decent. Bezels are thin which makes the laptop look more premium than it is.",
+      "product_no": 2005,
+      "user_id": "user_3",
+      "review_id": 58,
+      "helpful_vote": 14,
+      "date_time": "29/04/23 [02.45 pm]"
+    },
+    {
+      "title": "Average battery",
+      "text": "Lasts about 5-6 hours with normal use. Not great for all-day use without carrying the charger.",
+      "product_no": 2005,
+      "user_id": "user_4",
+      "review_id": 59,
+      "helpful_vote": 7,
+      "date_time": "06/05/23 [12.30 pm]"
+    },
+    {
+      "title": "Value for money",
+      "text": "If you need a basic laptop for everyday tasks, this delivers. The SSD makes it feel faster than HDD-based laptops in this range.",
+      "product_no": 2005,
+      "user_id": "user_5",
+      "review_id": 60,
+      "helpful_vote": 15,
+      "date_time": "13/05/23 [03.15 pm]"
+    },
+    {
+      "title": "Solid performer",
+      "text": "The Ryzen 5 combined with 16GB RAM handles everything I throw at it. The backlit keyboard is a nice touch for late-night work.",
+      "product_no": 2006,
+      "user_id": "user_1",
+      "review_id": 61,
+      "helpful_vote": 16,
+      "date_time": "20/04/23 [09.45 am]"
+    },
+    {
+      "title": "Fans get loud",
+      "text": "The cooling system is aggressive and the fans spin up frequently even during moderate workloads. Can be distracting in quiet environments.",
+      "product_no": 2006,
+      "user_id": "user_2",
+      "review_id": 62,
+      "helpful_vote": 10,
+      "date_time": "25/04/23 [04.15 pm]"
+    },
+    {
+      "title": "Great for programming",
+      "text": "As a developer, the 16GB RAM and fast SSD make coding and testing applications a smooth experience. Screen could be brighter though.",
+      "product_no": 2006,
+      "user_id": "user_3",
+      "review_id": 63,
+      "helpful_vote": 17,
+      "date_time": "02/05/23 [01.30 pm]"
+    },
+    {
+      "title": "Mediocre webcam",
+      "text": "The 720p webcam produces grainy images. Not ideal for video calls. Everything else about the laptop is good though.",
+      "product_no": 2006,
+      "user_id": "user_4",
+      "review_id": 64,
+      "helpful_vote": 8,
+      "date_time": "09/05/23 [11.45 am]"
+    },
+    {
+      "title": "Reliable daily driver",
+      "text": "Been using for 6 months without any issues. Performance remains consistent and the build quality has held up well.",
+      "product_no": 2006,
+      "user_id": "user_5",
+      "review_id": 65,
+      "helpful_vote": 18,
+      "date_time": "16/05/23 [02.30 pm]"
+    },
+    {
+      "title": "Gaming powerhouse",
+      "text": "The i7 and RTX 3050 Ti combo delivers excellent gaming performance. The 144Hz display makes games look incredibly smooth.",
+      "product_no": 2007,
+      "user_id": "user_1",
+      "review_id": 66,
+      "helpful_vote": 19,
+      "date_time": "23/04/23 [10.15 am]"
+    },
+    {
+      "title": "Runs hot",
+      "text": "Gets uncomfortably warm during gaming sessions. Need to use a cooling pad for extended play. Performance is good when thermals are controlled.",
+      "product_no": 2007,
+      "user_id": "user_2",
+      "review_id": 67,
+      "helpful_vote": 12,
+      "date_time": "28/04/23 [05.30 pm]"
+    },
+    {
+      "title": "Great build quality",
+      "text": "The metal chassis feels premium and durable. Keyboard has good travel and the RGB lighting is customizable.",
+      "product_no": 2007,
+      "user_id": "user_3",
+      "review_id": 68,
+      "helpful_vote": 18,
+      "date_time": "05/05/23 [02.45 pm]"
+    },
+    {
+      "title": "Average battery life",
+      "text": "Only lasts about 2 hours when gaming and 4-5 hours for normal use. Expected better given the size of the laptop.",
+      "product_no": 2007,
+      "user_id": "user_4",
+      "review_id": 69,
+      "helpful_vote": 9,
+      "date_time": "12/05/23 [12.30 pm]"
+    },
+    {
+      "title": "Worth the price",
+      "text": "Compared to other gaming laptops with similar specs, this offers the best value. The performance per dollar is excellent.",
+      "product_no": 2007,
+      "user_id": "user_5",
+      "review_id": 70,
+      "helpful_vote": 20,
+      "date_time": "19/05/23 [03.15 pm]"
+    },
+    {
+      "title": "Best ANC headphones",
+      "text": "The noise cancellation is simply amazing - blocks out even loud office chatter completely. Sound quality is exceptional across all frequencies.",
+      "product_no": 3001,
+      "user_id": "user_1",
+      "review_id": 71,
+      "helpful_vote": 20,
+      "date_time": "26/04/23 [09.45 am]"
+    },
+    {
+      "title": "Expensive but worth it",
+      "text": "Yes they're pricey, but the combination of ANC, sound quality and comfort makes these the best wireless headphones available.",
       "product_no": 3001,
       "user_id": "user_2",
-      "verified_purchase": true,
-      "helpful_vote": 34,
-      "legitimacy_score": 0.96,
-      "spam_flag": false,
-      "ai_analysis": "Detailed cooking experience with health benefits",
-      "Time": "12/04/25 7:20 pm"
+      "review_id": 72,
+      "helpful_vote": 17,
+      "date_time": "01/05/23 [04.15 pm]"
     },
     {
-      "rating": 4.0,
-      "title": "Great appliance, easy to clean",
-      "text": "The air fryer works well for most foods. Crispy results and easy cleanup. Sometimes need to adjust cooking times from the manual but overall very satisfied. Good value for the features offered.",
+      "title": "Comfortable for long sessions",
+      "text": "Can wear these for hours without discomfort. The ear cushions are plush and the headband is well-padded. Sound signature is balanced.",
+      "product_no": 3001,
+      "user_id": "user_3",
+      "review_id": 73,
+      "helpful_vote": 19,
+      "date_time": "08/05/23 [01.30 pm]"
+    },
+    {
+      "title": "Touch controls are finicky",
+      "text": "The touch controls on the earcups are too sensitive and often trigger accidentally. Physical buttons would have been better.",
+      "product_no": 3001,
+      "user_id": "user_4",
+      "review_id": 74,
+      "helpful_vote": 11,
+      "date_time": "15/05/23 [11.45 am]"
+    },
+    {
+      "title": "Perfect for travel",
+      "text": "The ANC makes flights so much more bearable. Battery life is excellent - lasted my entire 14-hour flight with ANC on.",
       "product_no": 3001,
       "user_id": "user_5",
-      "verified_purchase": true,
+      "review_id": 75,
+      "helpful_vote": 20,
+      "date_time": "22/05/23 [02.30 pm]"
+    },
+    {
+      "title": "Superb comfort",
+      "text": "The ear cushions are incredibly soft and the lightweight design makes long listening sessions fatigue-free. ANC is nearly as good as Sony.",
+      "product_no": 3002,
+      "user_id": "user_1",
+      "review_id": 76,
+      "helpful_vote": 18,
+      "date_time": "29/04/23 [10.15 am]"
+    },
+    {
+      "title": "Average sound quality",
+      "text": "While the ANC is excellent, the sound signature is too bass-heavy for my taste. Lacks the clarity of competitors at this price.",
+      "product_no": 3002,
+      "user_id": "user_2",
+      "review_id": 77,
+      "helpful_vote": 12,
+      "date_time": "04/05/23 [05.30 pm]"
+    },
+    {
+      "title": "Great for office use",
+      "text": "The ANC blocks out office noise perfectly. The microphone quality is also excellent for calls. Battery lasts through my workweek.",
+      "product_no": 3002,
+      "user_id": "user_3",
+      "review_id": 78,
+      "helpful_vote": 17,
+      "date_time": "11/05/23 [02.45 pm]"
+    },
+    {
+      "title": "Earcups could be larger",
+      "text": "For people with larger ears, the earcups might feel a bit small. Gets uncomfortable after 2-3 hours of continuous use.",
+      "product_no": 3002,
+      "user_id": "user_4",
+      "review_id": 79,
+      "helpful_vote": 9,
+      "date_time": "18/05/23 [12.30 pm]"
+    },
+    {
+      "title": "Reliable performance",
+      "text": "Been using these daily for 6 months without any issues. The build quality is excellent and they still look like new.",
+      "product_no": 3002,
+      "user_id": "user_5",
+      "review_id": 80,
+      "helpful_vote": 19,
+      "date_time": "25/05/23 [03.15 pm]"
+    },
+    {
+      "title": "Perfect fit",
+      "text": "The new design fits my ears perfectly and doesn't fall out during workouts. ANC is improved from the 1st gen and sound quality is excellent.",
+      "product_no": 3003,
+      "user_id": "user_1",
+      "review_id": 81,
+      "helpful_vote": 19,
+      "date_time": "02/05/23 [09.45 am]"
+    },
+    {
+      "title": "Battery life could be better",
+      "text": "With ANC on, battery drains faster than expected. Need to charge every 4-5 hours of continuous use.",
+      "product_no": 3003,
+      "user_id": "user_2",
+      "review_id": 82,
+      "helpful_vote": 11,
+      "date_time": "07/05/23 [04.15 pm]"
+    },
+    {
+      "title": "Seamless Apple integration",
+      "text": "If you're in the Apple ecosystem, these are a no-brainer. Automatic switching between devices works flawlessly.",
+      "product_no": 3003,
+      "user_id": "user_3",
+      "review_id": 83,
+      "helpful_vote": 18,
+      "date_time": "14/05/23 [01.30 pm]"
+    },
+    {
+      "title": "Expensive for what you get",
+      "text": "While good, these aren't significantly better than competitors that cost less. The Apple tax is real.",
+      "product_no": 3003,
+      "user_id": "user_4",
+      "review_id": 84,
+      "helpful_vote": 10,
+      "date_time": "21/05/23 [11.45 am]"
+    },
+    {
+      "title": "Best wireless earbuds",
+      "text": "The combination of ANC, sound quality and comfort makes these the best true wireless earbuds available right now.",
+      "product_no": 3003,
+      "user_id": "user_5",
+      "review_id": 85,
+      "helpful_vote": 20,
+      "date_time": "28/05/23 [02.30 pm]"
+    },
+    {
+      "title": "Great value",
+      "text": "For the price, these offer excellent ANC and sound quality. Battery life is impressive - lasts through long flights.",
+      "product_no": 3004,
+      "user_id": "user_1",
+      "review_id": 86,
       "helpful_vote": 16,
-      "legitimacy_score": 0.87,
-      "spam_flag": false,
-      "ai_analysis": "Practical review with usage tips",
-      "Time": "15/04/25 11:30 am"
+      "date_time": "05/05/23 [10.15 am]"
     },
     {
-      "rating": 1.0,
-      "title": "Stopped working after 2 months",
-      "text": "The air fryer died completely after just 2 months of regular use. Customer service was unhelpful. Poor build quality for such an expensive appliance. Don't waste your money.",
-      "product_no": 3001,
-      "user_id": "user_10",
-      "verified_purchase": false,
-      "helpful_vote": 1,
-      "legitimacy_score": 0.45,
-      "spam_flag": true,
-      "ai_analysis": "Suspicious short-term failure claim without verification",
-      "Time": "18/04/25 2:45 pm"
+      "title": "Uncomfortable for long use",
+      "text": "The ear cushions aren't as plush as more premium options. Gets uncomfortable after about an hour of continuous wear.",
+      "product_no": 3004,
+      "user_id": "user_2",
+      "review_id": 87,
+      "helpful_vote": 9,
+      "date_time": "10/05/23 [05.30 pm]"
     },
     {
-      "rating": 4.0,
-      "title": "Effective face serum with visible results",
-      "text": "Been using Lakme Vitamin C serum for 6 weeks and can see noticeable brightening of my skin. Dark spots are fading gradually. Good value for money in the drugstore category. Will continue using.",
+      "title": "Solid ANC performance",
+      "text": "The ANC works surprisingly well for the price. Blocks out most low-frequency noises like AC hum and engine rumble.",
+      "product_no": 3004,
+      "user_id": "user_3",
+      "review_id": 88,
+      "helpful_vote": 15,
+      "date_time": "17/05/23 [02.45 pm]"
+    },
+    {
+      "title": "Plastic feels cheap",
+      "text": "Build quality isn't as premium as more expensive options. The plastic feels flimsy and the headband has minimal padding.",
+      "product_no": 3004,
+      "user_id": "user_4",
+      "review_id": 89,
+      "helpful_vote": 7,
+      "date_time": "24/05/23 [12.30 pm]"
+    },
+    {
+      "title": "Best under 10k",
+      "text": "In this price range, nothing beats the Tune 760NC. The combination of features and sound quality is unmatched.",
+      "product_no": 3004,
+      "user_id": "user_5",
+      "review_id": 90,
+      "helpful_vote": 17,
+      "date_time": "31/05/23 [03.15 pm]"
+    },
+    {
+      "title": "Budget king",
+      "text": "For the price, these sound fantastic. Bass is punchy and the battery life is excellent. Perfect for casual listening.",
+      "product_no": 3005,
+      "user_id": "user_1",
+      "review_id": 91,
+      "helpful_vote": 15,
+      "date_time": "08/05/23 [09.45 am]"
+    },
+    {
+      "title": "Average sound quality",
+      "text": "Sound is decent but lacks clarity in mids and highs. Bass is overpowering and muddy. Okay for the price but not amazing.",
+      "product_no": 3005,
+      "user_id": "user_2",
+      "review_id": 92,
+      "helpful_vote": 8,
+      "date_time": "13/05/23 [04.15 pm]"
+    },
+    {
+      "title": "Great for workouts",
+      "text": "Lightweight and stays secure during exercise. The ear cushions are comfortable and don't make my ears sweat too much.",
+      "product_no": 3005,
+      "user_id": "user_3",
+      "review_id": 93,
+      "helpful_vote": 14,
+      "date_time": "20/05/23 [01.30 pm]"
+    },
+    {
+      "title": "Build quality issues",
+      "text": "After 3 months of careful use, the right earcup started rattling. Expected better durability even at this price.",
+      "product_no": 3005,
+      "user_id": "user_4",
+      "review_id": 94,
+      "helpful_vote": 6,
+      "date_time": "27/05/23 [11.45 am]"
+    },
+    {
+      "title": "Value for money",
+      "text": "If you need basic wireless headphones and don't want to spend much, these are perfect. Sound is good enough for casual listening.",
+      "product_no": 3005,
+      "user_id": "user_5",
+      "review_id": 95,
+      "helpful_vote": 16,
+      "date_time": "03/06/23 [02.30 pm]"
+    },
+    {
+      "title": "Clear detailed sound",
+      "text": "The sound signature is balanced with excellent clarity. ANC works well for office environments. Very comfortable for all-day wear.",
+      "product_no": 3006,
+      "user_id": "user_1",
+      "review_id": 96,
+      "helpful_vote": 17,
+      "date_time": "10/05/23 [10.15 am]"
+    },
+    {
+      "title": "ANC could be better",
+      "text": "While the sound quality is excellent, the ANC isn't as effective as Sony or Bose. Still good for the price though.",
+      "product_no": 3006,
+      "user_id": "user_2",
+      "review_id": 97,
+      "helpful_vote": 10,
+      "date_time": "15/05/23 [05.30 pm]"
+    },
+    {
+      "title": "Great for classical music",
+      "text": "The neutral sound signature is perfect for acoustic and classical genres. Instruments sound natural and well-separated.",
+      "product_no": 3006,
+      "user_id": "user_3",
+      "review_id": 98,
+      "helpful_vote": 16,
+      "date_time": "22/05/23 [02.45 pm]"
+    },
+    {
+      "title": "Clamping force too strong",
+      "text": "The headphones clamp quite tightly, which can cause discomfort during long listening sessions. Needs some break-in time.",
+      "product_no": 3006,
+      "user_id": "user_4",
+      "review_id": 99,
+      "helpful_vote": 8,
+      "date_time": "29/05/23 [12.30 pm]"
+    },
+    {
+      "title": "Sennheiser quality",
+      "text": "Typical Sennheiser sound - detailed and accurate. The build quality is excellent and they feel durable.",
+      "product_no": 3006,
+      "user_id": "user_5",
+      "review_id": 100,
+      "helpful_vote": 18,
+      "date_time": "05/06/23 [03.15 pm]"
+    },
+    {
+      "title": "Great budget buds",
+      "text": "For the price, the sound quality is impressive. Battery life is excellent and they're comfortable for extended wear.",
+      "product_no": 3007,
+      "user_id": "user_1",
+      "review_id": 101,
+      "helpful_vote": 14,
+      "date_time": "12/05/23 [09.45 am]"
+    },
+    {
+      "title": "Average call quality",
+      "text": "Microphone quality is just okay - people say I sound muffled during calls. For music they're good but not for frequent callers.",
+      "product_no": 3007,
+      "user_id": "user_2",
+      "review_id": 102,
+      "helpful_vote": 7,
+      "date_time": "17/05/23 [04.15 pm]"
+    },
+    {
+      "title": "Fast charging works",
+      "text": "The 10-minute charge giving 10 hours playback is real. Sound is good for workouts and casual listening.",
+      "product_no": 3007,
+      "user_id": "user_3",
+      "review_id": 103,
+      "helpful_vote": 13,
+      "date_time": "24/05/23 [01.30 pm]"
+    },
+    {
+      "title": "Fit could be better",
+      "text": "The earbuds don't fit my ears securely - tend to fall out during workouts. Sound is good when they stay in though.",
+      "product_no": 3007,
+      "user_id": "user_4",
+      "review_id": 104,
+      "helpful_vote": 5,
+      "date_time": "31/05/23 [11.45 am]"
+    },
+    {
+      "title": "Best under 3k",
+      "text": "Compared to other options in this price range, the Nord Buds 2 offer the best combination of sound quality and features.",
+      "product_no": 3007,
+      "user_id": "user_5",
+      "review_id": 105,
+      "helpful_vote": 15,
+      "date_time": "07/06/23 [02.30 pm]"
+    },
+    {
+      "title": "Perfect smartwatch",
+      "text": "The Series 8 is the best Apple Watch yet. The temperature sensor is accurate and the always-on display is bright.",
+      "product_no": 4001,
+      "user_id": "user_1",
+      "review_id": 106,
+      "helpful_vote": 18,
+      "date_time": "14/05/23 [10.15 am]"
+    },
+    {
+      "title": "Battery life could be better",
+      "text": "Still needs daily charging, especially with always-on display enabled. Wish Apple would prioritize battery improvements.",
+      "product_no": 4001,
+      "user_id": "user_2",
+      "review_id": 107,
+      "helpful_vote": 11,
+      "date_time": "19/05/23 [05.30 pm]"
+    },
+    {
+      "title": "Seamless Apple integration",
+      "text": "Works perfectly with my iPhone and Mac. The health tracking features are comprehensive and accurate.",
+      "product_no": 4001,
+      "user_id": "user_3",
+      "review_id": 108,
+      "helpful_vote": 17,
+      "date_time": "26/05/23 [02.45 pm]"
+    },
+    {
+      "title": "Expensive",
+      "text": "While excellent, the price is hard to justify when previous generations offer similar core functionality for less.",
       "product_no": 4001,
       "user_id": "user_4",
-      "verified_purchase": true,
-      "helpful_vote": 22,
-      "legitimacy_score": 0.89,
-      "spam_flag": false,
-      "ai_analysis": "Realistic timeline for skincare results",
-      "Time": "20/04/25 9:15 am"
+      "review_id": 109,
+      "helpful_vote": 9,
+      "date_time": "02/06/23 [12.30 pm]"
     },
     {
-      "rating": 5.0,
-      "title": "Amazing LEGO set, hours of fun",
-      "text": "The LEGO Creator 3-in-1 Deep Sea Creatures set is fantastic! My 8-year-old loves building all three different models. Quality is excellent as expected from LEGO. Instructions are clear and the finished models look great on display. Worth every penny for creative play.",
+      "title": "Worth the upgrade",
+      "text": "Coming from Series 5, the larger screen and faster processor make a noticeable difference. Crash detection gives peace of mind.",
+      "product_no": 4001,
+      "user_id": "user_5",
+      "review_id": 110,
+      "helpful_vote": 19,
+      "date_time": "09/06/23 [03.15 pm]"
+    },
+    {
+      "title": "Premium build",
+      "text": "The sapphire crystal glass and titanium body feel incredibly premium. The rotating bezel is satisfying to use.",
+      "product_no": 4002,
+      "user_id": "user_1",
+      "review_id": 111,
+      "helpful_vote": 16,
+      "date_time": "16/05/23 [09.45 am]"
+    },
+    {
+      "title": "Battery life is amazing",
+      "text": "Easily lasts 3-4 days with always-on display enabled. The fast charging is convenient when I do need to top up.",
+      "product_no": 4002,
+      "user_id": "user_2",
+      "review_id": 112,
+      "helpful_vote": 15,
+      "date_time": "21/05/23 [04.15 pm]"
+    },
+    {
+      "title": "Great for Android users",
+      "text": "If you have a Samsung phone, this is the best smartwatch available. The integration is seamless and feature set is comprehensive.",
+      "product_no": 4002,
+      "user_id": "user_3",
+      "review_id": 113,
+      "helpful_vote": 18,
+      "date_time": "28/05/23 [01.30 pm]"
+    },
+    {
+      "title": "Too bulky",
+      "text": "The watch is quite thick and heavy compared to Apple Watch. Not comfortable for sleeping with it on.",
+      "product_no": 4002,
+      "user_id": "user_4",
+      "review_id": 114,
+      "helpful_vote": 8,
+      "date_time": "04/06/23 [11.45 am]"
+    },
+    {
+      "title": "Best Wear OS watch",
+      "text": "The combination of hardware and software makes this the best Wear OS watch available. Performance is smooth and reliable.",
+      "product_no": 4002,
+      "user_id": "user_5",
+      "review_id": 115,
+      "helpful_vote": 20,
+      "date_time": "11/06/23 [02.30 pm]"
+    },
+    {
+      "title": "Accurate fitness tracking",
+      "text": "The GPS and heart rate tracking are very accurate compared to my chest strap. Sleep tracking provides useful insights.",
+      "product_no": 4003,
+      "user_id": "user_1",
+      "review_id": 116,
+      "helpful_vote": 15,
+      "date_time": "18/05/23 [10.15 am]"
+    },
+    {
+      "title": "Limited smart features",
+      "text": "As a fitness tracker it's excellent, but the smart features are basic compared to Apple Watch or Galaxy Watch.",
+      "product_no": 4003,
+      "user_id": "user_2",
+      "review_id": 117,
+      "helpful_vote": 9,
+      "date_time": "23/05/23 [05.30 pm]"
+    },
+    {
+      "title": "Great battery life",
+      "text": "Lasts a full week with always-on display disabled. The quick charge feature is convenient for when I forget to charge.",
+      "product_no": 4003,
+      "user_id": "user_3",
+      "review_id": 118,
+      "helpful_vote": 16,
+      "date_time": "30/05/23 [02.45 pm]"
+    },
+    {
+      "title": "Screen could be brighter",
+      "text": "Hard to see in direct sunlight even at max brightness. The touch response could also be more responsive.",
+      "product_no": 4003,
+      "user_id": "user_4",
+      "review_id": 119,
+      "helpful_vote": 7,
+      "date_time": "06/06/23 [12.30 pm]"
+    },
+    {
+      "title": "Perfect for runners",
+      "text": "The lightweight design and accurate GPS make this ideal for tracking runs. The battery lasts through marathon training sessions.",
+      "product_no": 4003,
+      "user_id": "user_5",
+      "review_id": 120,
+      "helpful_vote": 17,
+      "date_time": "13/06/23 [03.15 pm]"
+    },
+    {
+      "title": "Great budget option",
+      "text": "For the price, the AMOLED display is impressive. The fitness tracking features work well and battery lasts about 5 days.",
+      "product_no": 4004,
+      "user_id": "user_1",
+      "review_id": 121,
+      "helpful_vote": 14,
+      "date_time": "20/05/23 [09.45 am]"
+    },
+    {
+      "title": "Software is buggy",
+      "text": "The companion app crashes frequently and some health metrics don't sync properly. Hardware is good but software needs work.",
+      "product_no": 4004,
+      "user_id": "user_2",
+      "review_id": 122,
+      "helpful_vote": 8,
+      "date_time": "25/05/23 [04.15 pm]"
+    },
+    {
+      "title": "Stylish design",
+      "text": "Looks much more expensive than it is. The metal frame gives it a premium feel and the display is vibrant.",
+      "product_no": 4004,
+      "user_id": "user_3",
+      "review_id": 123,
+      "helpful_vote": 13,
+      "date_time": "01/06/23 [01.30 pm]"
+    },
+    {
+      "title": "Heart rate inaccuracy",
+      "text": "During workouts, the heart rate readings are often significantly off compared to my chest strap monitor.",
+      "product_no": 4004,
+      "user_id": "user_4",
+      "review_id": 124,
+      "helpful_vote": 6,
+      "date_time": "08/06/23 [11.45 am]"
+    },
+    {
+      "title": "Best under 5k",
+      "text": "If you want a basic smartwatch with good looks and decent features, this is the best option in this price range.",
+      "product_no": 4004,
+      "user_id": "user_5",
+      "review_id": 125,
+      "helpful_vote": 15,
+      "date_time": "15/06/23 [02.30 pm]"
+    },
+    {
+      "title": "Slim and lightweight",
+      "text": "One of the slimmest smartwatches I've used. The screen is bright and responsive. Battery lasts about 6 days with normal use.",
+      "product_no": 4005,
+      "user_id": "user_1",
+      "review_id": 126,
+      "helpful_vote": 15,
+      "date_time": "22/05/23 [10.15 am]"
+    },
+    {
+      "title": "Limited app support",
+      "text": "The selection of apps is minimal compared to Wear OS or watchOS. Mostly useful for fitness tracking only.",
+      "product_no": 4005,
+      "user_id": "user_2",
+      "review_id": 127,
+      "helpful_vote": 9,
+      "date_time": "27/05/23 [05.30 pm]"
+    },
+    {
+      "title": "Accurate sports modes",
+      "text": "The various sports modes track activities accurately. The GPS locks on quickly and provides precise route tracking.",
+      "product_no": 4005,
+      "user_id": "user_3",
+      "review_id": 128,
+      "helpful_vote": 14,
+      "date_time": "03/06/23 [02.45 pm]"
+    },
+    {
+      "title": "Screen scratches easily",
+      "text": "After a month of careful use, the screen has several visible scratches. Should have included sapphire glass at this price.",
+      "product_no": 4005,
+      "user_id": "user_4",
+      "review_id": 129,
+      "helpful_vote": 7,
+      "date_time": "10/06/23 [12.30 pm]"
+    },
+    {
+      "title": "Great fitness companion",
+      "text": "For athletes who want detailed workout metrics without the bulk of Garmin watches, this is perfect. The battery life is impressive.",
+      "product_no": 4005,
+      "user_id": "user_5",
+      "review_id": 130,
+      "helpful_vote": 16,
+      "date_time": "17/06/23 [03.15 pm]"
+    },
+    {
+      "title": "Cheap but functional",
+      "text": "For the price, it offers basic smartwatch features. The calling function works well and the battery lasts about 3 days.",
+      "product_no": 4006,
+      "user_id": "user_1",
+      "review_id": 131,
+      "helpful_vote": 12,
+      "date_time": "24/05/23 [09.45 am]"
+    },
+    {
+      "title": "Poor touch response",
+      "text": "The touchscreen is often unresponsive and requires multiple taps. The UI is laggy when navigating menus.",
+      "product_no": 4006,
+      "user_id": "user_2",
+      "review_id": 132,
+      "helpful_vote": 6,
+      "date_time": "29/05/23 [04.15 pm]"
+    },
+    {
+      "title": "Good for notifications",
+      "text": "Works well for basic notifications and calls. The display is bright enough outdoors and the vibration is strong.",
+      "product_no": 4006,
+      "user_id": "user_3",
+      "review_id": 133,
+      "helpful_vote": 11,
+      "date_time": "05/06/23 [01.30 pm]"
+    },
+    {
+      "title": "Inaccurate health metrics",
+      "text": "The SpO2 and heart rate readings are often way off compared to medical devices. Not reliable for health monitoring.",
+      "product_no": 4006,
+      "user_id": "user_4",
+      "review_id": 134,
+      "helpful_vote": 5,
+      "date_time": "12/06/23 [11.45 am]"
+    },
+    {
+      "title": "Basic but works",
+      "text": "If you just need a cheap smartwatch for notifications and basic tracking, this gets the job done. Don't expect premium features.",
+      "product_no": 4006,
+      "user_id": "user_5",
+      "review_id": 135,
+      "helpful_vote": 13,
+      "date_time": "19/06/23 [02.30 pm]"
+    },
+    {
+      "title": "Accurate health tracking",
+      "text": "The health metrics are very accurate compared to my Garmin. The animated workouts are a nice bonus. Battery lasts about 10 days.",
+      "product_no": 4007,
+      "user_id": "user_1",
+      "review_id": 136,
+      "helpful_vote": 16,
+      "date_time": "26/05/23 [10.15 am]"
+    },
+    {
+      "title": "Expensive for features",
+      "text": "While good, it's hard to justify the price when competitors offer similar features for less. The screen is quite small too.",
+      "product_no": 4007,
+      "user_id": "user_2",
+      "review_id": 137,
+      "helpful_vote": 9,
+      "date_time": "31/05/23 [05.30 pm]"
+    },
+    {
+      "title": "Great for outdoor activities",
+      "text": "The GPS tracking is accurate and the battery lasts through long hikes. The rugged build can handle outdoor abuse.",
+      "product_no": 4007,
+      "user_id": "user_3",
+      "review_id": 138,
+      "helpful_vote": 15,
+      "date_time": "07/06/23 [02.45 pm]"
+    },
+    {
+      "title": "Limited smart features",
+      "text": "Focuses more on fitness than smart features. Notifications are basic and there's no voice assistant support.",
+      "product_no": 4007,
+      "user_id": "user_4",
+      "review_id": 139,
+      "helpful_vote": 7,
+      "date_time": "14/06/23 [12.30 pm]"
+    },
+    {
+      "title": "Reliable fitness companion",
+      "text": "As someone who trains daily, this provides all the metrics I need accurately. The battery life means I don't have to charge frequently.",
+      "product_no": 4007,
+      "user_id": "user_5",
+      "review_id": 140,
+      "helpful_vote": 17,
+      "date_time": "21/06/23 [03.15 pm]"
+    },
+    {
+      "title": "Perfect tablet",
+      "text": "The M1 chip makes this incredibly fast. The display is gorgeous and battery life is excellent. Works perfectly with Apple Pencil.",
       "product_no": 5001,
       "user_id": "user_1",
-      "verified_purchase": true,
-      "helpful_vote": 29,
-      "legitimacy_score": 0.94,
-      "spam_flag": false,
-      "ai_analysis": "Parent review with age-appropriate assessment",
-      "Time": "22/04/25 4:30 pm"
+      "review_id": 141,
+      "helpful_vote": 19,
+      "date_time": "28/05/23 [09.45 am]"
     },
     {
-      "rating": 4.0,
-      "title": "Life-changing book with practical wisdom",
-      "text": "The Alchemist is a beautiful philosophical journey that makes you reflect on your own dreams and purpose. Paulo Coelho's writing is simple yet profound. This book has inspired me to pursue my goals with renewed passion. A must-read for everyone.",
+      "title": "Overkill for most",
+      "text": "Unless you're doing professional work, the M1 is overkill for a tablet. The price is hard to justify for casual use.",
+      "product_no": 5001,
+      "user_id": "user_2",
+      "review_id": 142,
+      "helpful_vote": 12,
+      "date_time": "02/06/23 [04.15 pm]"
+    },
+    {
+      "title": "Best for creatives",
+      "text": "As a digital artist, the combination of Procreate and Apple Pencil makes this the best drawing tablet available.",
+      "product_no": 5001,
+      "user_id": "user_3",
+      "review_id": 143,
+      "helpful_vote": 18,
+      "date_time": "09/06/23 [01.30 pm]"
+    },
+    {
+      "title": "Limited iPadOS",
+      "text": "The hardware is amazing but iPadOS still feels limiting compared to a full desktop OS. Multitasking could be better.",
+      "product_no": 5001,
+      "user_id": "user_4",
+      "review_id": 144,
+      "helpful_vote": 10,
+      "date_time": "16/06/23 [11.45 am]"
+    },
+    {
+      "title": "Worth the premium",
+      "text": "Yes it's expensive, but the build quality, performance and display make this the best tablet you can buy right now.",
+      "product_no": 5001,
+      "user_id": "user_5",
+      "review_id": 145,
+      "helpful_vote": 20,
+      "date_time": "23/06/23 [02.30 pm]"
+    },
+    {
+      "title": "Android powerhouse",
+      "text": "The Snapdragon 8 Gen 1 makes this the most powerful Android tablet available. The 120Hz display is buttery smooth.",
+      "product_no": 5002,
+      "user_id": "user_1",
+      "review_id": 146,
+      "helpful_vote": 17,
+      "date_time": "30/05/23 [10.15 am]"
+    },
+    {
+      "title": "Expensive",
+      "text": "While good, it's hard to justify the price when the iPad Air offers better performance for less. Android tablet apps are still limited.",
+      "product_no": 5002,
+      "user_id": "user_2",
+      "review_id": 147,
+      "helpful_vote": 11,
+      "date_time": "04/06/23 [05.30 pm]"
+    },
+    {
+      "title": "S Pen is excellent",
+      "text": "The included S Pen works flawlessly with no lag. Great for note taking and digital art. The OLED display makes colors pop.",
+      "product_no": 5002,
+      "user_id": "user_3",
+      "review_id": 148,
+      "helpful_vote": 19,
+      "date_time": "11/06/23 [02.45 pm]"
+    },
+    {
+      "title": "Heavy and bulky",
+      "text": "The tablet is quite heavy compared to the iPad. Not ideal for prolonged handheld use. The bezels are also quite thick.",
+      "product_no": 5002,
+      "user_id": "user_4",
+      "review_id": 149,
+      "helpful_vote": 8,
+      "date_time": "18/06/23 [12.30 pm]"
+    },
+    {
+      "title": "Best Android tablet",
+      "text": "If you're invested in the Android/Samsung ecosystem, this is the tablet to get. Performance and display quality are top-notch.",
+      "product_no": 5002,
+      "user_id": "user_5",
+      "review_id": 150,
+      "helpful_vote": 20,
+      "date_time": "25/06/23 [03.15 pm]"
+    },
+    {
+      "title": "Great OLED display",
+      "text": "The 11.5-inch OLED is gorgeous with perfect blacks. The quad speakers provide immersive audio for movies and games.",
+      "product_no": 5003,
+      "user_id": "user_1",
+      "review_id": 151,
+      "helpful_vote": 16,
+      "date_time": "01/06/23 [09.45 am]"
+    },
+    {
+      "title": "Mediocre performance",
+      "text": "The processor struggles with multitasking. Noticeable lag when switching between apps or having multiple tabs open.",
+      "product_no": 5003,
+      "user_id": "user_2",
+      "review_id": 152,
+      "helpful_vote": 9,
+      "date_time": "06/06/23 [04.15 pm]"
+    },
+    {
+      "title": "Excellent battery",
+      "text": "The 8600mAh battery easily lasts 2 days with moderate use. Charges quickly with the included 20W charger.",
+      "product_no": 5003,
+      "user_id": "user_3",
+      "review_id": 153,
+      "helpful_vote": 15,
+      "date_time": "13/06/23 [01.30 pm]"
+    },
+    {
+      "title": "Software bugs",
+      "text": "The software experience isn't as polished as Samsung's. Some apps crash unexpectedly and the UI stutters occasionally.",
+      "product_no": 5003,
+      "user_id": "user_4",
+      "review_id": 154,
+      "helpful_vote": 7,
+      "date_time": "20/06/23 [11.45 am]"
+    },
+    {
+      "title": "Great media consumption",
+      "text": "Perfect for streaming movies and reading. The OLED display makes everything look fantastic. Lightweight for its size.",
+      "product_no": 5003,
+      "user_id": "user_5",
+      "review_id": 155,
+      "helpful_vote": 17,
+      "date_time": "27/06/23 [02.30 pm]"
+    },
+    {
+      "title": "Smooth display",
+      "text": "The 144Hz refresh rate makes scrolling and animations incredibly smooth. The Snapdragon 870 handles games well.",
+      "product_no": 5004,
+      "user_id": "user_1",
+      "review_id": 156,
+      "helpful_vote": 15,
+      "date_time": "03/06/23 [10.15 am]"
+    },
+    {
+      "title": "MIUI issues",
+      "text": "The hardware is good but MIUI has too many ads and bloatware. Had to spend hours removing unwanted apps and disabling ads.",
+      "product_no": 5004,
+      "user_id": "user_2",
+      "review_id": 157,
+      "helpful_vote": 10,
+      "date_time": "08/06/23 [05.30 pm]"
+    },
+    {
+      "title": "Great for gaming",
+      "text": "The high refresh rate display and powerful processor make this great for mobile gaming. Doesn't get too hot under load.",
+      "product_no": 5004,
+      "user_id": "user_3",
+      "review_id": 158,
+      "helpful_vote": 16,
+      "date_time": "15/06/23 [02.45 pm]"
+    },
+    {
+      "title": "Average cameras",
+      "text": "The cameras are just okay - good enough for video calls but don't expect great photos, especially in low light.",
+      "product_no": 5004,
+      "user_id": "user_4",
+      "review_id": 159,
+      "helpful_vote": 7,
+      "date_time": "22/06/23 [12.30 pm]"
+    },
+    {
+      "title": "Best value tablet",
+      "text": "For the price, you can't get better specs. The display and performance rival more expensive tablets.",
+      "product_no": 5004,
+      "user_id": "user_5",
+      "review_id": 160,
+      "helpful_vote": 18,
+      "date_time": "29/06/23 [03.15 pm]"
+    },
+    {
+      "title": "Lightweight and portable",
+      "text": "Perfect size for reading and media consumption. The 2K display is sharp and colors are vibrant.",
+      "product_no": 5005,
+      "user_id": "user_1",
+      "review_id": 161,
+      "helpful_vote": 14,
+      "date_time": "05/06/23 [09.45 am]"
+    },
+    {
+      "title": "Underpowered",
+      "text": "The processor struggles with multitasking. Noticeable lag when switching between apps or having multiple tabs open.",
+      "product_no": 5005,
+      "user_id": "user_2",
+      "review_id": 162,
+      "helpful_vote": 8,
+      "date_time": "10/06/23 [04.15 pm]"
+    },
+    {
+      "title": "Good speakers",
+      "text": "The quad speakers provide surprisingly good audio quality for a budget tablet. Great for watching movies.",
+      "product_no": 5005,
+      "user_id": "user_3",
+      "review_id": 163,
+      "helpful_vote": 13,
+      "date_time": "17/06/23 [01.30 pm]"
+    },
+    {
+      "title": "Software needs work",
+      "text": "The UI isn't as polished as Samsung's. Some apps don't scale properly to tablet size and the software feels unoptimized.",
+      "product_no": 5005,
+      "user_id": "user_4",
+      "review_id": 164,
+      "helpful_vote": 6,
+      "date_time": "24/06/23 [11.45 am]"
+    },
+    {
+      "title": "Decent budget option",
+      "text": "If you need a basic tablet for media consumption and light browsing, this gets the job done at a reasonable price.",
+      "product_no": 5005,
+      "user_id": "user_5",
+      "review_id": 165,
+      "helpful_vote": 15,
+      "date_time": "01/07/23 [02.30 pm]"
+    },
+    {
+      "title": "Basic but functional",
+      "text": "Good for basic tablet needs like browsing and video streaming. The 2K display is sharp for the price.",
+      "product_no": 5006,
+      "user_id": "user_1",
+      "review_id": 166,
+      "helpful_vote": 12,
+      "date_time": "07/06/23 [10.15 am]"
+    },
+    {
+      "title": "Slow performance",
+      "text": "The entry-level processor shows its limitations quickly. Apps take longer to load and multitasking is sluggish.",
+      "product_no": 5006,
+      "user_id": "user_2",
+      "review_id": 167,
+      "helpful_vote": 7,
+      "date_time": "12/06/23 [05.30 pm]"
+    },
+    {
+      "title": "Good build quality",
+      "text": "Surprisingly sturdy for a budget tablet. The metal frame gives it a premium feel compared to plastic competitors.",
+      "product_no": 5006,
+      "user_id": "user_3",
+      "review_id": 168,
+      "helpful_vote": 11,
+      "date_time": "19/06/23 [02.45 pm]"
+    },
+    {
+      "title": "Outdated Android",
+      "text": "Shipping with Android 11 in 2023 is disappointing. No guarantee of timely updates from Nokia either.",
+      "product_no": 5006,
+      "user_id": "user_4",
+      "review_id": 169,
+      "helpful_vote": 5,
+      "date_time": "26/06/23 [12.30 pm]"
+    },
+    {
+      "title": "Okay for kids",
+      "text": "Bought this for my child for online classes. Works fine for basic educational apps and YouTube. Don't expect too much.",
+      "product_no": 5006,
+      "user_id": "user_5",
+      "review_id": 170,
+      "helpful_vote": 13,
+      "date_time": "03/07/23 [03.15 pm]"
+    },
+    {
+      "title": "Perfect portable Windows",
+      "text": "The perfect balance of portability and functionality. Runs full Windows 11 smoothly and the keyboard cover is excellent.",
+      "product_no": 5007,
+      "user_id": "user_1",
+      "review_id": 171,
+      "helpful_vote": 17,
+      "date_time": "09/06/23 [09.45 am]"
+    },
+    {
+      "title": "Underpowered",
+      "text": "The Pentium processor struggles with anything beyond basic tasks. Even web browsing with multiple tabs causes slowdowns.",
+      "product_no": 5007,
+      "user_id": "user_2",
+      "review_id": 172,
+      "helpful_vote": 10,
+      "date_time": "14/06/23 [04.15 pm]"
+    },
+    {
+      "title": "Great for students",
+      "text": "Perfect for note-taking and light productivity. The pen support works well with OneNote. Battery lasts through school days.",
+      "product_no": 5007,
+      "user_id": "user_3",
+      "review_id": 173,
+      "helpful_vote": 16,
+      "date_time": "21/06/23 [01.30 pm]"
+    },
+    {
+      "title": "Expensive for specs",
+      "text": "The hardware is underwhelming for the price. You're paying mostly for the form factor and Microsoft branding.",
+      "product_no": 5007,
+      "user_id": "user_4",
+      "review_id": 174,
+      "helpful_vote": 8,
+      "date_time": "28/06/23 [11.45 am]"
+    },
+    {
+      "title": "Best Windows tablet",
+      "text": "If you need a compact Windows device, this is the best option available. The build quality and accessories are top-notch.",
+      "product_no": 5007,
+      "user_id": "user_5",
+      "review_id": 175,
+      "helpful_vote": 19,
+      "date_time": "05/07/23 [02.30 pm]"
+    },
+    {
+      "title": "Stunning QLED picture",
+      "text": "The colors and brightness are incredible. Quantum HDR makes everything pop with amazing contrast. Upscaling is excellent too.",
+      "product_no": 6001,
+      "user_id": "user_1",
+      "review_id": 176,
+      "helpful_vote": 19,
+      "date_time": "11/06/23 [10.15 am]"
+    },
+    {
+      "title": "Great but expensive",
+      "text": "Picture quality is fantastic but the price is steep compared to similar spec'd models from other brands.",
+      "product_no": 6001,
+      "user_id": "user_2",
+      "review_id": 177,
+      "helpful_vote": 12,
+      "date_time": "16/06/23 [05.30 pm]"
+    },
+    {
+      "title": "Perfect for movies",
+      "text": "Watching 4K HDR content is breathtaking. The local dimming works well to produce deep blacks. Sound quality is decent too.",
       "product_no": 6001,
       "user_id": "user_3",
-      "verified_purchase": true,
-      "helpful_vote": 41,
-      "legitimacy_score": 0.97,
-      "spam_flag": false,
-      "ai_analysis": "Thoughtful literary review with personal impact",
-      "Time": "25/04/25 8:45 am"
+      "review_id": 178,
+      "helpful_vote": 18,
+      "date_time": "23/06/23 [02.45 pm]"
     },
     {
-      "rating": 5.0,
-      "title": "Excellent workout shirt, stays dry",
-      "text": "Nike Dri-FIT technology really works! This training t-shirt keeps me dry during intense workouts. Comfortable fit and the fabric feels premium. Classic Nike design looks great. Perfect for gym or running. Will buy more colors.",
+      "title": "Bloated smart features",
+      "text": "The Tizen OS has too many ads and promoted content. Should be cleaner for a premium TV. Picture quality is excellent though.",
+      "product_no": 6001,
+      "user_id": "user_4",
+      "review_id": 179,
+      "helpful_vote": 11,
+      "date_time": "30/06/23 [12.30 pm]"
+    },
+    {
+      "title": "Worth the premium",
+      "text": "After comparing many models, this had the best picture quality in its class. The colors and brightness are unmatched.",
+      "product_no": 6001,
+      "user_id": "user_5",
+      "review_id": 180,
+      "helpful_vote": 20,
+      "date_time": "07/07/23 [03.15 pm]"
+    },
+    {
+      "title": "Perfect blacks",
+      "text": "OLED makes all the difference - the infinite contrast is breathtaking. The α9 processor upscales content beautifully.",
+      "product_no": 6002,
+      "user_id": "user_1",
+      "review_id": 181,
+      "helpful_vote": 20,
+      "date_time": "13/06/23 [09.45 am]"
+    },
+    {
+      "title": "Expensive but worth it",
+      "text": "Yes it's pricey, but once you see OLED in person, it's hard to go back. The picture quality is simply stunning.",
+      "product_no": 6002,
+      "user_id": "user_2",
+      "review_id": 182,
+      "helpful_vote": 17,
+      "date_time": "18/06/23 [04.15 pm]"
+    },
+    {
+      "title": "Great for gaming",
+      "text": "The HDMI 2.1 ports support 4K/120Hz gaming perfectly. Input lag is low and the picture quality makes games look incredible.",
+      "product_no": 6002,
+      "user_id": "user_3",
+      "review_id": 183,
+      "helpful_vote": 19,
+      "date_time": "25/06/23 [01.30 pm]"
+    },
+    {
+      "title": "Risk of burn-in",
+      "text": "Picture is amazing but I'm always worried about static elements causing burn-in. Have to be careful with news channels and gaming HUDs.",
+      "product_no": 6002,
+      "user_id": "user_4",
+      "review_id": 184,
+      "helpful_vote": 13,
+      "date_time": "02/07/23 [11.45 am]"
+    },
+    {
+      "title": "Best TV I've owned",
+      "text": "Coming from a high-end LED TV, the OLED difference is night and day. Movies and games have never looked better.",
+      "product_no": 6002,
+      "user_id": "user_5",
+      "review_id": 185,
+      "helpful_vote": 20,
+      "date_time": "09/07/23 [02.30 pm]"
+    },
+    {
+      "title": "Great value",
+      "text": "For the price, the picture quality is excellent. The Gamma Engine does a good job upscaling HD content to near-4K quality.",
+      "product_no": 6003,
+      "user_id": "user_1",
+      "review_id": 186,
+      "helpful_vote": 16,
+      "date_time": "15/06/23 [10.15 am]"
+    },
+    {
+      "title": "Average sound",
+      "text": "The built-in speakers are just okay - lacks bass. Had to connect a soundbar for proper movie watching.",
+      "product_no": 6003,
+      "user_id": "user_2",
+      "review_id": 187,
+      "helpful_vote": 9,
+      "date_time": "20/06/23 [05.30 pm]"
+    },
+    {
+      "title": "Smooth Android TV",
+      "text": "The interface is snappy and has all the streaming apps I need. Google Assistant integration works well.",
+      "product_no": 6003,
+      "user_id": "user_3",
+      "review_id": 188,
+      "helpful_vote": 15,
+      "date_time": "27/06/23 [02.45 pm]"
+    },
+    {
+      "title": "Backlight bleeding",
+      "text": "Noticeable light bleed in the corners, especially in dark scenes. Panel uniformity could be better.",
+      "product_no": 6003,
+      "user_id": "user_4",
+      "review_id": 189,
+      "helpful_vote": 7,
+      "date_time": "04/07/23 [12.30 pm]"
+    },
+    {
+      "title": "Best mid-range TV",
+      "text": "Compared to other TVs in this price range, the OnePlus offers the best combination of features and picture quality.",
+      "product_no": 6003,
+      "user_id": "user_5",
+      "review_id": 190,
+      "helpful_vote": 17,
+      "date_time": "11/07/23 [03.15 pm]"
+    },
+    {
+      "title": "Excellent for the price",
+      "text": "The picture quality is surprisingly good for a budget 4K TV. Colors are vibrant and the Android TV interface is smooth.",
+      "product_no": 6004,
+      "user_id": "user_1",
+      "review_id": 191,
+      "helpful_vote": 15,
+      "date_time": "17/06/23 [09.45 am]"
+    },
+    {
+      "title": "Ads in interface",
+      "text": "The PatchWall UI is full of ads and promoted content. Had to switch to standard Android TV mode to make it usable.",
+      "product_no": 6004,
+      "user_id": "user_2",
+      "review_id": 192,
+      "helpful_vote": 10,
+      "date_time": "22/06/23 [04.15 pm]"
+    },
+    {
+      "title": "Great smart features",
+      "text": "Comes with all major streaming apps pre-installed. The built-in Chromecast is convenient for casting from phone.",
+      "product_no": 6004,
+      "user_id": "user_3",
+      "review_id": 193,
+      "helpful_vote": 14,
+      "date_time": "29/06/23 [01.30 pm]"
+    },
+    {
+      "title": "Viewing angles could be better",
+      "text": "Picture quality degrades when viewed from the side. Fine for straight-on viewing but not ideal for wide seating arrangements.",
+      "product_no": 6004,
+      "user_id": "user_4",
+      "review_id": 194,
+      "helpful_vote": 6,
+      "date_time": "06/07/23 [11.45 am]"
+    },
+    {
+      "title": "Budget 4K champion",
+      "text": "If you want 4K on a budget, this is the best option. Picture quality rivals more expensive brands.",
+      "product_no": 6004,
+      "user_id": "user_5",
+      "review_id": 195,
+      "helpful_vote": 16,
+      "date_time": "13/07/23 [02.30 pm]"
+    },
+    {
+      "title": "Accurate colors",
+      "text": "The Triluminos display produces natural, accurate colors. Great for watching sports and nature documentaries.",
+      "product_no": 6005,
+      "user_id": "user_1",
+      "review_id": 196,
+      "helpful_vote": 16,
+      "date_time": "19/06/23 [10.15 am]"
+    },
+    {
+      "title": "Small for 43-inch",
+      "text": "The bezels are quite thick, making the actual screen size feel smaller than other 43-inch models.",
+      "product_no": 6005,
+      "user_id": "user_2",
+      "review_id": 197,
+      "helpful_vote": 8,
+      "date_time": "24/06/23 [05.30 pm]"
+    },
+    {
+      "title": "Excellent motion handling",
+      "text": "Motionflow XR makes fast action smooth without the soap opera effect. Great for sports and action movies.",
+      "product_no": 6005,
+      "user_id": "user_3",
+      "review_id": 198,
+      "helpful_vote": 15,
+      "date_time": "01/07/23 [02.45 pm]"
+    },
+    {
+      "title": "Android TV is slow",
+      "text": "The processor struggles with the Android TV interface. Apps take longer to load compared to other Android TVs.",
+      "product_no": 6005,
+      "user_id": "user_4",
+      "review_id": 199,
+      "helpful_vote": 7,
+      "date_time": "08/07/23 [12.30 pm]"
+    },
+    {
+      "title": "Sony quality",
+      "text": "Typical Sony attention to detail. The picture processing is excellent and the build quality is solid.",
+      "product_no": 6005,
+      "user_id": "user_5",
+      "review_id": 200,
+      "helpful_vote": 17,
+      "date_time": "15/07/23 [03.15 pm]"
+    },
+    {
+      "title": "Good budget option",
+      "text": "For the price, the picture quality is decent. The bezel-less design looks modern and the Android TV works well.",
+      "product_no": 6006,
+      "user_id": "user_1",
+      "review_id": 201,
+      "helpful_vote": 13,
+      "date_time": "21/06/23 [09.45 am]"
+    },
+    {
+      "title": "Only Full HD",
+      "text": "At this size, 4K would have been better. Text isn't as sharp as 4K panels when sitting close.",
+      "product_no": 6006,
+      "user_id": "user_2",
+      "review_id": 202,
+      "helpful_vote": 7,
+      "date_time": "26/06/23 [04.15 pm]"
+    },
+    {
+      "title": "Great for bedroom",
+      "text": "Perfect secondary TV for the bedroom. The speakers are decent enough and the size is ideal for smaller rooms.",
+      "product_no": 6006,
+      "user_id": "user_3",
+      "review_id": 203,
+      "helpful_vote": 12,
+      "date_time": "03/07/23 [01.30 pm]"
+    },
+    {
+      "title": "Average picture quality",
+      "text": "Colors look washed out compared to more premium TVs. Blacks aren't very deep and contrast is just okay.",
+      "product_no": 6006,
+      "user_id": "user_4",
+      "review_id": 204,
+      "helpful_vote": 5,
+      "date_time": "10/07/23 [11.45 am]"
+    },
+    {
+      "title": "Basic but works",
+      "text": "If you need a simple smart TV for casual viewing, this gets the job done. Don't expect premium features or picture quality.",
+      "product_no": 6006,
+      "user_id": "user_5",
+      "review_id": 205,
+      "helpful_vote": 14,
+      "date_time": "17/07/23 [02.30 pm]"
+    },
+    {
+      "title": "Great for small spaces",
+      "text": "Perfect for my kitchen. The picture quality is decent for the size and price. The Roku interface is simple and easy to use.",
+      "product_no": 6007,
+      "user_id": "user_1",
+      "review_id": 206,
+      "helpful_vote": 12,
+      "date_time": "23/06/23 [10.15 am]"
+    },
+    {
+      "title": "Basic smart features",
+      "text": "The smart platform is limited compared to Android TV or webOS. App selection is smaller and interface feels outdated.",
+      "product_no": 6007,
+      "user_id": "user_2",
+      "review_id": 207,
+      "helpful_vote": 6,
+      "date_time": "28/06/23 [05.30 pm]"
+    },
+    {
+      "title": "Good value",
+      "text": "For the price, you get a functional smart TV with decent picture quality. Perfect as a secondary TV or for a kid's room.",
+      "product_no": 6007,
+      "user_id": "user_3",
+      "review_id": 208,
+      "helpful_vote": 11,
+      "date_time": "05/07/23 [02.45 pm]"
+    },
+    {
+      "title": "Viewing angles poor",
+      "text": "Picture quality degrades quickly when viewed from the side. Colors look washed out unless you're directly in front.",
+      "product_no": 6007,
+      "user_id": "user_4",
+      "review_id": 209,
+      "helpful_vote": 4,
+      "date_time": "12/07/23 [12.30 pm]"
+    },
+    {
+      "title": "Entry-level option",
+      "text": "If you're on a tight budget and need a basic smart TV, this is acceptable. Just don't expect amazing picture quality.",
+      "product_no": 6007,
+      "user_id": "user_5",
+      "review_id": 210,
+      "helpful_vote": 13,
+      "date_time": "19/07/23 [03.15 pm]"
+    },
+    {
+      "title": "Professional quality",
+      "text": "The image quality is stunning - excellent dynamic range and low light performance. The autofocus is incredibly fast and accurate.",
+      "product_no": 7001,
+      "user_id": "user_1",
+      "review_id": 211,
+      "helpful_vote": 19,
+      "date_time": "25/06/23 [09.45 am]"
+    },
+    {
+      "title": "Complex menu system",
+      "text": "The image quality is fantastic but Sony's menu system takes time to learn. Not as intuitive as Canon's interface.",
       "product_no": 7001,
       "user_id": "user_2",
-      "verified_purchase": true,
-      "helpful_vote": 17,
-      "legitimacy_score": 0.92,
-      "spam_flag": false,
-      "ai_analysis": "Specific performance feedback for athletic wear",
-      "Time": "28/04/25 6:20 pm"
+      "review_id": 212,
+      "helpful_vote": 11,
+      "date_time": "30/06/23 [04.15 pm]"
     },
     {
-      "rating": 4.0,
-      "title": "Gentle and effective baby shampoo",
-      "text": "Johnson's Baby Shampoo is our go-to for our 6-month-old. The no-tears formula is truly gentle and doesn't irritate baby's eyes. Pleasant mild fragrance and good value for the large 500ml bottle. Trusted brand that delivers on promises.",
-      "product_no": 8001,
+      "title": "Worth every penny",
+      "text": "As a professional photographer, this camera delivers exceptional results in all conditions. The eye AF is revolutionary.",
+      "product_no": 7001,
+      "user_id": "user_3",
+      "review_id": 213,
+      "helpful_vote": 20,
+      "date_time": "07/07/23 [01.30 pm]"
+    },
+    {
+      "title": "Battery life could be better",
+      "text": "The small battery drains quickly, especially when using the EVF. Need to carry multiple spares for all-day shoots.",
+      "product_no": 7001,
       "user_id": "user_4",
-      "verified_purchase": true,
-      "helpful_vote": 26,
-      "legitimacy_score": 0.95,
-      "spam_flag": false,
-      "ai_analysis": "Parent testimonial with safety focus",
-      "Time": "30/04/25 11:15 am"
+      "review_id": 214,
+      "helpful_vote": 13,
+      "date_time": "14/07/23 [11.45 am]"
     },
     {
-      "rating": 5.0,
-      "title": "Rich flavor, perfect morning tea",
-      "text": "Tata Tea Premium has the perfect blend of strength and aroma. Makes an excellent cup of tea every time. The 1kg pack offers great value and the tea stays fresh. This is our family's preferred tea brand for over 10 years.",
-      "product_no": 9001,
+      "title": "Best all-rounder",
+      "text": "Perfect balance of photo and video capabilities. The 4K video quality is excellent and the stills are stunning.",
+      "product_no": 7001,
+      "user_id": "user_5",
+      "review_id": 215,
+      "helpful_vote": 20,
+      "date_time": "21/07/23 [02.30 pm]"
+    },
+    {
+      "title": "Speed demon",
+      "text": "The 40fps burst shooting is incredible for action and wildlife. The autofocus tracks moving subjects perfectly.",
+      "product_no": 7002,
       "user_id": "user_1",
-      "verified_purchase": true,
-      "helpful_vote": 21,
-      "legitimacy_score": 0.93,
-      "spam_flag": false,
-      "ai_analysis": "Long-term user with family preference",
-      "Time": "02/05/25 7:30 am"
+      "review_id": 216,
+      "helpful_vote": 18,
+      "date_time": "27/06/23 [10.15 am]"
     },
     {
-      "rating": 3.0,
-      "title": "Basic coffee table, serves purpose",
-      "text": "IKEA Lack coffee table is affordable and functional. Assembly was straightforward. Build quality is basic but adequate for the price. Not the most stylish but works well in small apartments. Good value for budget furniture.",
-      "product_no": 10001,
-      "user_id": "user_6",
-      "verified_purchase": true,
+      "title": "Overheating issues",
+      "text": "The camera overheats quickly when shooting 6K video, sometimes shutting down after just 20 minutes.",
+      "product_no": 7002,
+      "user_id": "user_2",
+      "review_id": 217,
       "helpful_vote": 12,
-      "legitimacy_score": 0.84,
-      "spam_flag": false,
-      "ai_analysis": "Realistic budget furniture assessment",
-      "Time": "05/05/25 3:45 pm"
+      "date_time": "02/07/23 [05.30 pm]"
     },
     {
-      "rating": 2.0,
-      "title": "Too sweet, artificial taste",
-      "text": "This mixed fruit jam is overly sweet and tastes artificial. The fruit pieces are minimal and the texture is too gel-like. Expected better quality from Kissan brand. Won't purchase again.",
-      "product_no": 9004,
-      "user_id": "user_8",
-      "verified_purchase": true,
-      "helpful_vote": 7,
-      "legitimacy_score": 0.76,
-      "spam_flag": false,
-      "ai_analysis": "Negative taste preference review",
-      "Time": "08/05/25 10:20 am"
+      "title": "Excellent low light",
+      "text": "The high ISO performance is incredible - clean images even at 12800. The IBIS works great for handheld low light shots.",
+      "product_no": 7002,
+      "user_id": "user_3",
+      "review_id": 218,
+      "helpful_vote": 19,
+      "date_time": "09/07/23 [02.45 pm]"
     },
     {
-      "rating": 4.0,
-      "title": "Comfortable yoga mat with good grip",
-      "text": "The Reebok yoga mat provides excellent cushioning for my daily practice. The 6mm thickness is perfect for joint protection and the non-slip surface keeps me stable during poses. Eco-friendly materials are a bonus. Highly recommend for yoga enthusiasts.",
+      "title": "Expensive RF lenses",
+      "text": "The camera is excellent but the RF lens ecosystem is pricey. Adapter works well with EF lenses though.",
+      "product_no": 7002,
+      "user_id": "user_4",
+      "review_id": 219,
+      "helpful_vote": 10,
+      "date_time": "16/07/23 [12.30 pm]"
+    },
+    {
+      "title": "Professional workhorse",
+      "text": "This camera handles everything I throw at it - weddings, sports, wildlife. The files have incredible editing flexibility.",
+      "product_no": 7002,
+      "user_id": "user_5",
+      "review_id": 220,
+      "helpful_vote": 20,
+      "date_time": "23/07/23 [03.15 pm]"
+    },
+    {
+      "title": "Great entry full-frame",
+      "text": "Perfect for photographers moving to full-frame. The image quality is excellent and the dual SD slots are convenient.",
+      "product_no": 7003,
+      "user_id": "user_1",
+      "review_id": 221,
+      "helpful_vote": 16,
+      "date_time": "29/06/23 [09.45 am]"
+    },
+    {
+      "title": "Slow burst rate",
+      "text": "The 4.5fps burst is limiting for action photography. Wish Nikon had included a faster option.",
+      "product_no": 7003,
+      "user_id": "user_2",
+      "review_id": 222,
+      "helpful_vote": 9,
+      "date_time": "04/07/23 [04.15 pm]"
+    },
+    {
+      "title": "Excellent ergonomics",
+      "text": "The grip is comfortable for all-day shooting. Button layout is logical and the menu system is user-friendly.",
+      "product_no": 7003,
+      "user_id": "user_3",
+      "review_id": 223,
+      "helpful_vote": 15,
+      "date_time": "11/07/23 [01.30 pm]"
+    },
+    {
+      "title": "4K crop is limiting",
+      "text": "The heavy crop in 4K mode makes wide-angle shooting difficult. Better suited for telephoto video work.",
+      "product_no": 7003,
+      "user_id": "user_4",
+      "review_id": 224,
+      "helpful_vote": 8,
+      "date_time": "18/07/23 [11.45 am]"
+    },
+    {
+      "title": "Best value full-frame",
+      "text": "For the price, you can't get better full-frame image quality. Perfect for enthusiasts and semi-pro photographers.",
+      "product_no": 7003,
+      "user_id": "user_5",
+      "review_id": 225,
+      "helpful_vote": 17,
+      "date_time": "25/07/23 [02.30 pm]"
+    },
+    {
+      "title": "Compact powerhouse",
+      "text": "The perfect travel camera - small but packs professional features. The film simulations are fun and the image quality is superb.",
+      "product_no": 7004,
+      "user_id": "user_1",
+      "review_id": 226,
+      "helpful_vote": 17,
+      "date_time": "01/07/23 [10.15 am]"
+    },
+    {
+      "title": "Small grip",
+      "text": "The compact size is great for travel but the small grip makes it uncomfortable with larger lenses. Need an add-on grip.",
+      "product_no": 7004,
+      "user_id": "user_2",
+      "review_id": 227,
+      "helpful_vote": 10,
+      "date_time": "06/07/23 [05.30 pm]"
+    },
+    {
+      "title": "Beautiful JPEGs",
+      "text": "The film simulations produce gorgeous out-of-camera JPEGs. Saves time on editing for casual shooting.",
+      "product_no": 7004,
+      "user_id": "user_3",
+      "review_id": 228,
+      "helpful_vote": 16,
+      "date_time": "13/07/23 [02.45 pm]"
+    },
+    {
+      "title": "Battery life poor",
+      "text": "The small battery drains quickly, especially when using the EVF. Need to carry at least 3 spares for a day of shooting.",
+      "product_no": 7004,
+      "user_id": "user_4",
+      "review_id": 229,
+      "helpful_vote": 9,
+      "date_time": "20/07/23 [12.30 pm]"
+    },
+    {
+      "title": "Fujifilm magic",
+      "text": "The X-Trans sensor produces images with a special quality - great color and fine detail. Perfect for street photography.",
       "product_no": 7004,
       "user_id": "user_5",
-      "verified_purchase": true,
+      "review_id": 230,
       "helpful_vote": 18,
-      "legitimacy_score": 0.91,
-      "spam_flag": false,
-      "ai_analysis": "Detailed usage experience for fitness equipment",
-      "Time": "10/05/25 5:15 pm"
+      "date_time": "27/07/23 [03.15 pm]"
     },
     {
-      "rating": 1.0,
-      "title": "Terrible quality, broke immediately",
-      "text": "Worst purchase ever! This product broke the day I received it. Cheap plastic construction and poor design. Customer service was rude and unhelpful. Complete waste of money. Avoid at all costs!",
-      "product_no": 3006,
-      "user_id": "user_9",
-      "verified_purchase": false,
-      "helpful_vote": 0,
-      "legitimacy_score": 0.32,
-      "spam_flag": true,
-      "ai_analysis": "Extreme negative language with unverified purchase",
-      "Time": "12/05/25 1:30 pm"
+      "title": "Action camera king",
+      "text": "The 5.3K video is incredibly detailed and the stabilization is magical. Perfect for extreme sports and adventures.",
+      "product_no": 7005,
+      "user_id": "user_1",
+      "review_id": 231,
+      "helpful_vote": 18,
+      "date_time": "03/07/23 [09.45 am]"
+    },
+    {
+      "title": "Battery drains fast",
+      "text": "With all features enabled, the battery lasts less than an hour. Need multiple spares for extended shooting.",
+      "product_no": 7005,
+      "user_id": "user_2",
+      "review_id": 232,
+      "helpful_vote": 11,
+      "date_time": "08/07/23 [04.15 pm]"
+    },
+    {
+      "title": "Versatile mounting",
+      "text": "The new mounting system is more secure and versatile. Works with all my existing accessories too.",
+      "product_no": 7005,
+      "user_id": "user_3",
+      "review_id": 233,
+      "helpful_vote": 15,
+      "date_time": "15/07/23 [01.30 pm]"
+    },
+    {
+      "title": "Overheating issues",
+      "text": "In hot weather, the camera overheats quickly when shooting high resolution video, forcing shutdowns.",
+      "product_no": 7005,
+      "user_id": "user_4",
+      "review_id": 234,
+      "helpful_vote": 8,
+      "date_time": "22/07/23 [11.45 am]"
+    },
+    {
+      "title": "Best action cam",
+      "text": "Compared to competitors, the Hero 11 offers the best combination of image quality, stabilization and features.",
+      "product_no": 7005,
+      "user_id": "user_5",
+      "review_id": 235,
+      "helpful_vote": 19,
+      "date_time": "29/07/23 [02.30 pm]"
+    },
+    {
+      "title": "Vlogging perfection",
+      "text": "The flip-out screen, great autofocus and compact size make this perfect for vlogging. The built-in mic is surprisingly good too.",
+      "product_no": 7006,
+      "user_id": "user_1",
+      "review_id": 236,
+      "helpful_vote": 17,
+      "date_time": "05/07/23 [10.15 am]"
+    },
+    {
+      "title": "No viewfinder",
+      "text": "The lack of viewfinder makes outdoor shooting difficult in bright sunlight. Have to rely on the screen which can be hard to see.",
+      "product_no": 7006,
+      "user_id": "user_2",
+      "review_id": 237,
+      "helpful_vote": 9,
+      "date_time": "10/07/23 [05.30 pm]"
+    },
+    {
+      "title": "Excellent autofocus",
+      "text": "The real-time eye AF and tracking work flawlessly, even in 4K. Never miss a focus when vlogging or filming interviews.",
+      "product_no": 7006,
+      "user_id": "user_3",
+      "review_id": 238,
+      "helpful_vote": 16,
+      "date_time": "17/07/23 [02.45 pm]"
+    },
+    {
+      "title": "Battery life poor",
+      "text": "The small battery drains quickly when shooting video. Need to carry multiple spares for all-day vlogging.",
+      "product_no": 7006,
+      "user_id": "user_4",
+      "review_id": 239,
+      "helpful_vote": 7,
+      "date_time": "24/07/23 [12.30 pm]"
+    },
+    {
+      "title": "Perfect for creators",
+      "text": "If you need a compact camera primarily for video and vlogging, this is the best option available. The features are perfectly tailored.",
+      "product_no": 7006,
+      "user_id": "user_5",
+      "review_id": 240,
+      "helpful_vote": 18,
+      "date_time": "31/07/23 [03.15 pm]"
+    },
+    {
+      "title": "Great beginner DSLR",
+      "text": "Perfect for those new to photography. The guided UI helps learn manual controls and the image quality is excellent for the price.",
+      "product_no": 7007,
+      "user_id": "user_1",
+      "review_id": 241,
+      "helpful_vote": 15,
+      "date_time": "07/07/23 [09.45 am]"
+    },
+    {
+      "title": "Limited 4K",
+      "text": "The 4K video has a heavy crop and lacks Dual Pixel AF, making it hard to use seriously for video work.",
+      "product_no": 7007,
+      "user_id": "user_2",
+      "review_id": 242,
+      "helpful_vote": 8,
+      "date_time": "12/07/23 [04.15 pm]"
+    },
+    {
+      "title": "Excellent touchscreen",
+      "text": "The vari-angle touchscreen is responsive and makes changing settings intuitive. Great for beginners learning photography.",
+      "product_no": 7007,
+      "user_id": "user_3",
+      "review_id": 243,
+      "helpful_vote": 14,
+      "date_time": "19/07/23 [01.30 pm]"
+    },
+    {
+      "title": "Slow burst shooting",
+      "text": "At 5fps, the burst rate is limiting for action or sports photography. Better suited for static subjects.",
+      "product_no": 7007,
+      "user_id": "user_4",
+      "review_id": 244,
+      "helpful_vote": 6,
+      "date_time": "26/07/23 [11.45 am]"
+    },
+    {
+      "title": "Best entry-level DSLR",
+      "text": "For beginners wanting to learn photography with a DSLR, this is the best option available. Great image quality and easy to use.",
+      "product_no": 7007,
+      "user_id": "user_5",
+      "review_id": 245,
+      "helpful_vote": 16,
+      "date_time": "02/08/23 [02.30 pm]"
+    },
+    {
+      "title": "Next-gen gaming",
+      "text": "The SSD makes loading times nearly nonexistent. The DualSense controller adds immersive haptic feedback to games.",
+      "product_no": 8001,
+      "user_id": "user_1",
+      "review_id": 246,
+      "helpful_vote": 19,
+      "date_time": "09/07/23 [10.15 am]"
+    },
+    {
+      "title": "Limited storage",
+      "text": "The 825GB fills up quickly with modern games. Need to constantly delete and reinstall games due to lack of expandable storage.",
+      "product_no": 8001,
+      "user_id": "user_2",
+      "review_id": 247,
+      "helpful_vote": 12,
+      "date_time": "14/07/23 [05.30 pm]"
+    },
+    {
+      "title": "Exclusive games",
+      "text": "PlayStation continues to deliver amazing exclusives. The graphics and performance in first-party titles are stunning.",
+      "product_no": 8001,
+      "user_id": "user_3",
+      "review_id": 248,
+      "helpful_vote": 20,
+      "date_time": "21/07/23 [02.45 pm]"
+    },
+    {
+      "title": "No disc drive",
+      "text": "The digital-only limitation means no used games or disc sales. Have to pay full price for all games.",
+      "product_no": 8001,
+      "user_id": "user_4",
+      "review_id": 249,
+      "helpful_vote": 10,
+      "date_time": "28/07/23 [12.30 pm]"
+    },
+    {
+      "title": "Worth the wait",
+      "text": "After struggling to find stock, finally got one and it's amazing. The 4K gaming experience is next-level.",
+      "product_no": 8001,
+      "user_id": "user_5",
+      "review_id": 250,
+      "helpful_vote": 20,
+      "date_time": "04/08/23 [03.15 pm]"
+    },
+    {
+      "title": "Raw power",
+      "text": "The 12 TFLOPS deliver incredible performance. Games load quickly and look stunning in 4K. Quick Resume is a game-changer.",
+      "product_no": 8002,
+      "user_id": "user_1",
+      "review_id": 251,
+      "helpful_vote": 18,
+      "date_time": "11/07/23 [09.45 am]"
+    },
+    {
+      "title": "Bulky design",
+      "text": "The console is huge and heavy. Hard to fit in my entertainment center and not very portable.",
+      "product_no": 8002,
+      "user_id": "user_2",
+      "review_id": 252,
+      "helpful_vote": 11,
+      "date_time": "16/07/23 [04.15 pm]"
+    },
+    {
+      "title": "Game Pass value",
+      "text": "Xbox Game Pass is incredible - access to hundreds of games for a monthly fee. Makes the console worth it alone.",
+      "product_no": 8002,
+      "user_id": "user_3",
+      "review_id": 253,
+      "helpful_vote": 19,
+      "date_time": "23/07/23 [01.30 pm]"
+    },
+    {
+      "title": "Lack of exclusives",
+      "text": "While powerful, the Xbox still lacks must-have exclusives compared to PlayStation. Most games are also on PC.",
+      "product_no": 8002,
+      "user_id": "user_4",
+      "review_id": 254,
+      "helpful_vote": 9,
+      "date_time": "30/07/23 [11.45 am]"
+    },
+    {
+      "title": "4K gaming beast",
+      "text": "The most powerful console available. Native 4K gaming is smooth and the backwards compatibility is excellent.",
+      "product_no": 8002,
+      "user_id": "user_5",
+      "review_id": 255,
+      "helpful_vote": 20,
+      "date_time": "06/08/23 [02.30 pm]"
+    },
+    {
+      "title": "Perfect hybrid",
+      "text": "The OLED screen makes handheld mode much better. Colors pop and blacks are deep. Docked performance is solid too.",
+      "product_no": 8003,
+      "user_id": "user_1",
+      "review_id": 256,
+      "helpful_vote": 17,
+      "date_time": "13/07/23 [10.15 am]"
+    },
+    {
+      "title": "Underpowered hardware",
+      "text": "The Tegra chip is showing its age. Many newer games struggle with performance issues or don't get ported at all.",
+      "product_no": 8003,
+      "user_id": "user_2",
+      "review_id": 257,
+      "helpful_vote": 10,
+      "date_time": "18/07/23 [05.30 pm]"
+    },
+    {
+      "title": "Nintendo magic",
+      "text": "The first-party Nintendo games are incredible. The OLED screen makes them look even better in handheld mode.",
+      "product_no": 8003,
+      "user_id": "user_3",
+      "review_id": 258,
+      "helpful_vote": 18,
+      "date_time": "25/07/23 [02.45 pm]"
+    },
+    {
+      "title": "Joy-Con drift persists",
+      "text": "Even with the new model, my Joy-Cons started drifting after a few months. Nintendo needs to fix this hardware flaw.",
+      "product_no": 8003,
+      "user_id": "user_4",
+      "review_id": 259,
+      "helpful_vote": 12,
+      "date_time": "01/08/23 [12.30 pm]"
+    },
+    {
+      "title": "Best for Nintendo fans",
+      "text": "If you want to play Nintendo exclusives, this is the only option. The OLED screen upgrade is worth it for handheld players.",
+      "product_no": 8003,
+      "user_id": "user_5",
+      "review_id": 260,
+      "helpful_vote": 19,
+      "date_time": "08/08/23 [03.15 pm]"
+    },
+    {
+      "title": "Great value",
+      "text": "For the price, you get a capable 1080p gaming machine with a great game library. Perfect for casual gamers.",
+      "product_no": 8004,
+      "user_id": "user_1",
+      "review_id": 261,
+      "helpful_vote": 15,
+      "date_time": "15/07/23 [09.45 am]"
+    },
+    {
+      "title": "Outdated hardware",
+      "text": "The base PS4 is showing its age. Many newer games run at low resolutions or have performance issues.",
+      "product_no": 8004,
+      "user_id": "user_2",
+      "review_id": 262,
+      "helpful_vote": 8,
+      "date_time": "20/07/23 [04.15 pm]"
+    },
+    {
+      "title": "Huge game library",
+      "text": "The PS4 has an incredible library of exclusives and third-party games. Many are discounted now that PS5 is out.",
+      "product_no": 8004,
+      "user_id": "user_3",
+      "review_id": 263,
+      "helpful_vote": 16,
+      "date_time": "27/07/23 [01.30 pm]"
+    },
+    {
+      "title": "Loud fan noise",
+      "text": "The fan gets extremely loud when playing demanding games. Sounds like a jet engine during intense scenes.",
+      "product_no": 8004,
+      "user_id": "user_4",
+      "review_id": 264,
+      "helpful_vote": 9,
+      "date_time": "03/08/23 [11.45 am]"
+    },
+    {
+      "title": "Budget gaming",
+      "text": "If you can't find/afford a PS5, this still delivers great gaming experiences. The exclusives alone make it worth it.",
+      "product_no": 8004,
+      "user_id": "user_5",
+      "review_id": 265,
+      "helpful_vote": 17,
+      "date_time": "10/08/23 [02.30 pm]"
+    },
+    {
+      "title": "Compact and quiet",
+      "text": "The small form factor is perfect for my setup. Runs completely silent even during extended gaming sessions.",
+      "product_no": 8005,
+      "user_id": "user_1",
+      "review_id": 266,
+      "helpful_vote": 16,
+      "date_time": "17/07/23 [10.15 am]"
+    },
+    {
+      "title": "No disc drive",
+      "text": "The all-digital limitation means no used games or disc sales. Have to pay full price for all games.",
+      "product_no": 8005,
+      "user_id": "user_2",
+      "review_id": 267,
+      "helpful_vote": 9,
+      "date_time": "22/07/23 [05.30 pm]"
+    },
+    {
+      "title": "Game Pass machine",
+      "text": "Perfect for Game Pass subscribers. The value is incredible with hundreds of games available to play.",
+      "product_no": 8005,
+      "user_id": "user_3",
+      "review_id": 268,
+      "helpful_vote": 17,
+      "date_time": "29/07/23 [02.45 pm]"
+    },
+    {
+      "title": "1440p not 4K",
+      "text": "The marketing is misleading - this doesn't do native 4K gaming. Most games run at 1440p upscaled.",
+      "product_no": 8005,
+      "user_id": "user_4",
+      "review_id": 269,
+      "helpful_vote": 10,
+      "date_time": "05/08/23 [12.30 pm]"
+    },
+    {
+      "title": "Great secondary console",
+      "text": "Perfect companion to my gaming PC for Game Pass titles. The small size makes it easy to move between rooms.",
+      "product_no": 8005,
+      "user_id": "user_5",
+      "review_id": 270,
+      "helpful_vote": 18,
+      "date_time": "12/08/23 [03.15 pm]"
+    },
+    {
+      "title": "Portable gaming PC",
+      "text": "Incredible to have my Steam library in a handheld form. Plays most games well with some settings adjustments.",
+      "product_no": 8006,
+      "user_id": "user_1",
+      "review_id": 271,
+      "helpful_vote": 17,
+      "date_time": "19/07/23 [09.45 am]"
+    },
+    {
+      "title": "Battery life poor",
+      "text": "Playing demanding games drains the battery in under 2 hours. Need to stay plugged in for longer sessions.",
+      "product_no": 8006,
+      "user_id": "user_2",
+      "review_id": 272,
+      "helpful_vote": 10,
+      "date_time": "24/07/23 [04.15 pm]"
+    },
+    {
+      "title": "Versatile controls",
+      "text": "The trackpads make games not designed for controller playable. Can customize controls extensively for each game.",
+      "product_no": 8006,
+      "user_id": "user_3",
+      "review_id": 273,
+      "helpful_vote": 16,
+      "date_time": "31/07/23 [01.30 pm]"
+    },
+    {
+      "title": "Software needs polish",
+      "text": "SteamOS is buggy and some games don't work properly. Requires tinkering to get many titles running well.",
+      "product_no": 8006,
+      "user_id": "user_4",
+      "review_id": 274,
+      "helpful_vote": 8,
+      "date_time": "07/08/23 [11.45 am]"
+    },
+    {
+      "title": "Game changer",
+      "text": "The concept of a portable gaming PC is revolutionary. Despite some flaws, this is the future of handheld gaming.",
+      "product_no": 8006,
+      "user_id": "user_5",
+      "review_id": 275,
+      "helpful_vote": 19,
+      "date_time": "14/08/23 [02.30 pm]"
+    },
+    {
+      "title": "Power in portable form",
+      "text": "The AMD APU delivers impressive performance for the size. Can play many modern games at decent settings.",
+      "product_no": 8007,
+      "user_id": "user_1",
+      "review_id": 276,
+      "helpful_vote": 18,
+      "date_time": "21/07/23 [10.15 am]"
+    },
+    {
+      "title": "Limited storage",
+      "text": "The 64GB fills up quickly. Should have gone for the 256GB model. SSD is replaceable but not user-friendly.",
+      "product_no": 8007,
+      "user_id": "user_2",
+      "review_id": 277,
+      "helpful_vote": 11,
+      "date_time": "26/07/23 [05.30 pm]"
+    },
+    {
+      "title": "Great emulation",
+      "text": "Perfect for emulating older consoles. Can even handle some PS2 and GameCube games at full speed.",
+      "product_no": 8007,
+      "user_id": "user_3",
+      "review_id": 278,
+      "helpful_vote": 17,
+      "date_time": "02/08/23 [02.45 pm]"
+    },
+    {
+      "title": "Battery could be better",
+      "text": "Drains quickly when playing demanding games. Lasts about 2 hours with AAA titles at medium settings.",
+      "product_no": 8007,
+      "user_id": "user_4",
+      "review_id": 279,
+      "helpful_vote": 9,
+      "date_time": "09/08/23 [12.30 pm]"
+    },
+    {
+      "title": "Innovative device",
+      "text": "Despite some flaws, this is an incredible achievement. Makes PC gaming truly portable for the first time.",
+      "product_no": 8007,
+      "user_id": "user_5",
+      "review_id": 280,
+      "helpful_vote": 20,
+      "date_time": "16/08/23 [03.15 pm]"
+    },
+    {
+      "title": "Improved sound",
+      "text": "The 5th gen sounds significantly better than previous models. The temperature sensor is a useful addition too.",
+      "product_no": 9001,
+      "user_id": "user_1",
+      "review_id": 281,
+      "helpful_vote": 15,
+      "date_time": "23/07/23 [09.45 am]"
+    },
+    {
+      "title": "Same old design",
+      "text": "While improved internally, the exterior design is nearly identical to older models. Expected a refresh.",
+      "product_no": 9001,
+      "user_id": "user_2",
+      "review_id": 282,
+      "helpful_vote": 8,
+      "date_time": "28/07/23 [04.15 pm]"
+    },
+    {
+      "title": "Alexa works great",
+      "text": "The microphone array picks up my voice even from across the room. Integrates perfectly with my smart home devices.",
+      "product_no": 9001,
+      "user_id": "user_3",
+      "review_id": 283,
+      "helpful_vote": 16,
+      "date_time": "04/08/23 [01.30 pm]"
+    },
+    {
+      "title": "Privacy concerns",
+      "text": "Always worried about Amazon listening in. Have to remember to mute the mic when having private conversations.",
+      "product_no": 9001,
+      "user_id": "user_4",
+      "review_id": 284,
+      "helpful_vote": 7,
+      "date_time": "11/08/23 [11.45 am]"
+    },
+    {
+      "title": "Best smart speaker",
+      "text": "For Alexa users, this is the best smart speaker available. The sound quality is good for its size and the features are comprehensive.",
+      "product_no": 9001,
+      "user_id": "user_5",
+      "review_id": 285,
+      "helpful_vote": 17,
+      "date_time": "18/08/23 [02.30 pm]"
+    },
+    {
+      "title": "Compact and useful",
+      "text": "Perfect size for my kitchen. The Google Assistant is more accurate than Alexa for answering questions.",
+      "product_no": 9002,
+      "user_id": "user_1",
+      "review_id": 286,
+      "helpful_vote": 14,
+      "date_time": "25/07/23 [10.15 am]"
+    },
+    {
+      "title": "Weak bass",
+      "text": "While improved over the original, the bass is still lacking. Not ideal for music lovers.",
+      "product_no": 9002,
+      "user_id": "user_2",
+      "review_id": 287,
+      "helpful_vote": 7,
+      "date_time": "30/07/23 [05.30 pm]"
+    },
+    {
+      "title": "Great for smart home",
+      "text": "Controls all my smart devices perfectly. The voice recognition is excellent even with background noise.",
+      "product_no": 9002,
+      "user_id": "user_3",
+      "review_id": 288,
+      "helpful_vote": 15,
+      "date_time": "06/08/23 [02.45 pm]"
+    },
+    {
+      "title": "No audio out",
+      "text": "Lack of 3.5mm or Bluetooth output limits its usefulness. Can't connect to better speakers.",
+      "product_no": 9002,
+      "user_id": "user_4",
+      "review_id": 289,
+      "helpful_vote": 6,
+      "date_time": "13/08/23 [12.30 pm]"
+    },
+    {
+      "title": "Best Google speaker",
+      "text": "If you're invested in Google's ecosystem, this is the smart speaker to get. The Assistant integration is seamless.",
+      "product_no": 9002,
+      "user_id": "user_5",
+      "review_id": 290,
+      "helpful_vote": 16,
+      "date_time": "20/08/23 [03.15 pm]"
+    },
+    {
+      "title": "Simple and effective",
+      "text": "Works perfectly with my smart home setup. The energy monitoring feature helps track power usage.",
+      "product_no": 9003,
+      "user_id": "user_1",
+      "review_id": 291,
+      "helpful_vote": 13,
+      "date_time": "27/07/23 [09.45 am]"
+    },
+    {
+      "title": "App could be better",
+      "text": "The Tapo app is clunky and slow to respond. Wish it worked with Google Home directly instead of needing its own app.",
+      "product_no": 9003,
+      "user_id": "user_2",
+      "review_id": 292,
+      "helpful_vote": 6,
+      "date_time": "01/08/23 [04.15 pm]"
+    },
+    {
+      "title": "Reliable control",
+      "text": "Never had any connectivity issues. Can reliably turn devices on/off remotely or via schedules.",
+      "product_no": 9003,
+      "user_id": "user_3",
+      "review_id": 293,
+      "helpful_vote": 12,
+      "date_time": "08/08/23 [01.30 pm]"
+    },
+    {
+      "title": "Bulky design",
+      "text": "Takes up more outlet space than competitors. Blocks adjacent outlets even when using the side plugs.",
+      "product_no": 9003,
+      "user_id": "user_4",
+      "review_id": 294,
+      "helpful_vote": 5,
+      "date_time": "15/08/23 [11.45 am]"
+    },
+    {
+      "title": "Great value",
+      "text": "For the price, this offers excellent functionality. The energy monitoring is a bonus most competitors don't offer.",
+      "product_no": 9003,
+      "user_id": "user_5",
+      "review_id": 295,
+      "helpful_vote": 14,
+      "date_time": "22/08/23 [02.30 pm]"
+    },
+    {
+      "title": "Beautiful lighting",
+      "text": "The white light is warm and inviting. Can create perfect lighting for any mood or time of day.",
+      "product_no": 9004,
+      "user_id": "user_1",
+      "review_id": 296,
+      "helpful_vote": 15,
+      "date_time": "29/07/23 [10.15 am]"
+    },
+    {
+      "title": "Expensive starter kit",
+      "text": "The bridge should be included for free given the high bulb prices. Competitors offer better value.",
+      "product_no": 9004,
+      "user_id": "user_2",
+      "review_id": 297,
+      "helpful_vote": 8,
+      "date_time": "03/08/23 [05.30 pm]"
+    },
+    {
+      "title": "Reliable performance",
+      "text": "Never had any connectivity issues with the Hue system. The bulbs respond instantly to commands.",
+      "product_no": 9004,
+      "user_id": "user_3",
+      "review_id": 298,
+      "helpful_vote": 14,
+      "date_time": "10/08/23 [02.45 pm]"
+    },
+    {
+      "title": "Limited white range",
+      "text": "The white-only bulbs can't do colors obviously. Should have gone for the color ambiance version for more flexibility.",
+      "product_no": 9004,
+      "user_id": "user_4",
+      "review_id": 299,
+      "helpful_vote": 6,
+      "date_time": "17/08/23 [12.30 pm]"
+    },
+    {
+      "title": "Best smart lighting",
+      "text": "The Hue ecosystem is the most reliable and feature-rich smart lighting available. Worth the premium price.",
+      "product_no": 9004,
+      "user_id": "user_5",
+      "review_id": 300,
+      "helpful_vote": 16,
+      "date_time": "24/08/23 [03.15 pm]"
+    },
+    {
+      "title": "Effective cleaning",
+      "text": "Does a great job on both hard floors and carpets. The mopping function is basic but better than nothing.",
+      "product_no": 9005,
+      "user_id": "user_1",
+      "review_id": 301,
+      "helpful_vote": 14,
+      "date_time": "31/07/23 [09.45 am]"
+    },
+    {
+      "title": "Noisy operation",
+      "text": "Much louder than expected. Can't run it at night without disturbing sleep.",
+      "product_no": 9005,
+      "user_id": "user_2",
+      "review_id": 302,
+      "helpful_vote": 7,
+      "date_time": "05/08/23 [04.15 pm]"
+    },
+    {
+      "title": "Great mapping",
+      "text": "The LDS laser navigation creates accurate maps and efficient cleaning paths. Much better than random bump navigation.",
+      "product_no": 9005,
+      "user_id": "user_3",
+      "review_id": 303,
+      "helpful_vote": 15,
+      "date_time": "12/08/23 [01.30 pm]"
+    },
+    {
+      "title": "Small dustbin",
+      "text": "Needs emptying after every cleaning session for my medium-sized apartment. Wish it had a larger capacity.",
+      "product_no": 9005,
+      "user_id": "user_4",
+      "review_id": 304,
+      "helpful_vote": 6,
+      "date_time": "19/08/23 [11.45 am]"
+    },
+    {
+      "title": "Time saver",
+      "text": "Keeps my floors clean with minimal effort. The app scheduling means I come home to clean floors every day.",
+      "product_no": 9005,
+      "user_id": "user_5",
+      "review_id": 305,
+      "helpful_vote": 16,
+      "date_time": "26/08/23 [02.30 pm]"
+    },
+    {
+      "title": "Clear video quality",
+      "text": "The 2K resolution provides sharp images. Can clearly see faces and details even at night with the infrared.",
+      "product_no": 9006,
+      "user_id": "user_1",
+      "review_id": 306,
+      "helpful_vote": 15,
+      "date_time": "02/08/23 [10.15 am]"
+    },
+    {
+      "title": "Installation tricky",
+      "text": "Wiring it to existing doorbell wires was more complicated than expected. Needed help from an electrician.",
+      "product_no": 9006,
+      "user_id": "user_2",
+      "review_id": 307,
+      "helpful_vote": 8,
+      "date_time": "07/08/23 [05.30 pm]"
+    },
+    {
+      "title": "No subscription needed",
+      "text": "Love that it stores footage locally with no monthly fees. The microSD slot is conveniently placed.",
+      "product_no": 9006,
+      "user_id": "user_3",
+      "review_id": 308,
+      "helpful_vote": 14,
+      "date_time": "14/08/23 [02.45 pm]"
+    },
+    {
+      "title": "Limited cloud option",
+      "text": "While local storage is great, having no cloud option at all is limiting for some users.",
+      "product_no": 9006,
+      "user_id": "user_4",
+      "review_id": 309,
+      "helpful_vote": 6,
+      "date_time": "21/08/23 [12.30 pm]"
+    },
+    {
+      "title": "Great security addition",
+      "text": "Provides peace of mind knowing who's at the door. The motion detection is accurate with few false alerts.",
+      "product_no": 9006,
+      "user_id": "user_5",
+      "review_id": 310,
+      "helpful_vote": 17,
+      "date_time": "28/08/23 [03.15 pm]"
+    },
+    {
+      "title": "Vibrant colors",
+      "text": "The RGB colors are bright and vibrant. Can create any ambiance with the 16 million color options.",
+      "product_no": 9007,
+      "user_id": "user_1",
+      "review_id": 311,
+      "helpful_vote": 12,
+      "date_time": "04/08/23 [09.45 am]"
+    },
+    {
+      "title": "App needs work",
+      "text": "The Wipro app is clunky and unintuitive. Setting up schedules and scenes is more complicated than it should be.",
+      "product_no": 9007,
+      "user_id": "user_2",
+      "review_id": 312,
+      "helpful_vote": 5,
+      "date_time": "09/08/23 [04.15 pm]"
+    },
+    {
+      "title": "Good value",
+      "text": "For the price, you get decent smart bulb functionality. Works with both Alexa and Google Assistant.",
+      "product_no": 9007,
+      "user_id": "user_3",
+      "review_id": 313,
+      "helpful_vote": 11,
+      "date_time": "16/08/23 [01.30 pm]"
+    },
+    {
+      "title": "Not dimmable",
+      "text": "The bulb doesn't dim smoothly - tends to flicker at lower brightness levels. Fine at full brightness though.",
+      "product_no": 9007,
+      "user_id": "user_4",
+      "review_id": 314,
+      "helpful_vote": 4,
+      "date_time": "23/08/23 [11.45 am]"
+    },
+    {
+      "title": "Budget smart bulb",
+      "text": "If you want basic smart lighting without spending much, this gets the job done. Don't expect Hue quality.",
+      "product_no": 9007,
+      "user_id": "user_5",
+      "review_id": 315,
+      "helpful_vote": 13,
+      "date_time": "30/08/23 [02.30 pm]"
     }
   ]
 }

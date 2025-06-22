@@ -1,6 +1,4 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
+// prisma/schema.prisma
 generator client {
   provider = "prisma-client-js"
 }
@@ -14,9 +12,9 @@ model User {
   id            Int      @id @default(autoincrement())
   user_id_str   String   @unique @map("user_id_string") // Original user_id from json
   username      String
-  join_date     DateTime
   total_reviews Int
-  trust_score   Float
+  join_date     DateTime? // Made optional
+  trust_score   Float?    // Made optional
   reviews       Review[]
 
   @@map("users")
@@ -25,10 +23,10 @@ model User {
 model Seller {
   id             Int       @id @default(autoincrement())
   seller_id_str  String    @unique @map("seller_id_string") // Original seller_id from json
-  seller_name    String    @unique
+  seller_name    String    
   total_products Int
-  trust_score    Float
   is_verified    Boolean
+  trust_score    Float?    // Made optional
   products       Product[]
 
   @@map("sellers")
@@ -36,27 +34,29 @@ model Seller {
 
 model Product {
   id                     Int       @id @default(autoincrement())
-  product_no             Int       @unique // From Item.json
+  product_no             Int       @unique
   category               String
   title                  String
-  average_rating         Float?
-  rating_number          Int?      @map("reviews_count") // Renamed for clarity
-  description            String[]  // Array of strings from Item.json
+  average_rating         Float?    @map("rating") // Map to "rating" from Item.json
+  rating_number          Int?      // From Item.json "rating_number"
+  description            String?   // Now a single string, made optional
   price                  Float
-  store_seller_name      String    @map("seller_name_from_json") // Temp field for seeding, seller_name from Item.json
-  details                Json?     // From Item.json
-  verified_product       Boolean
-  review_summary         String?
-  fake_review_percentage Float?
+  
+  store_seller_id_ref    String?   @map("store_seller_id_from_json") // Temp field for seeding store_seller_id
+  
+  verified_product       Boolean?
+  image_url              String?   @map("image") // Map to "image" from Item.json
 
-  // Fields for frontend compatibility, to be populated from Item.json or placeholders
-  image_url              String?
-  thumbnail_urls         String[]  @default([])
-  sizes                  String[]  @default([]) // Assuming sizes could be added
-  shipping_info          Json?     // Assuming shipping info could be added as JSON
+  // Fields from previous schema, can be removed if no longer in Item.json or defaults are fine
+  review_summary         String?   // If not in new Item.json, remove or make nullable
+  fake_review_percentage Float?    // If not in new Item.json, remove or make nullable
+  details                Json?     // If not in new Item.json, remove or make nullable
+  thumbnail_urls         String[]  @default([]) // Keep for consistency or remove
+  sizes                  String[]  @default([]) // Keep for consistency or remove
+  shipping_info          Json?     // Keep for consistency or remove
 
-  sellerId Int?
-  seller   Seller? @relation(fields: [sellerId], references: [id])
+  sellerId Int?     // Foreign key to Seller table's PK
+  seller   Seller?  @relation(fields: [sellerId], references: [id])
 
   reviews Review[]
 
@@ -65,23 +65,28 @@ model Product {
 
 model Review {
   id                 Int      @id @default(autoincrement())
-  rating             Float
+  review_id_ref      Int?     @unique @map("review_id_from_json") // From reviews.json review_id
+  rating             Float?   // Make optional if not always present
   title              String?
   text               String
+  
   product_no_ref     Int      // To link with Product.product_no during seed
   user_id_str_ref    String   // To link with User.user_id_str during seed
-  verified_purchase  Boolean
-  helpful_vote       Int
-  legitimacy_score   Float?
-  spam_flag          Boolean?
-  ai_analysis        String?
-  time               DateTime // From reviews.json 'Time' field
+  
+  helpful_vote       Int?
+  time               DateTime // Will be parsed from date_time
+  
+  // Fields from previous schema, can be removed if no longer in reviews.json
+  verified_purchase  Boolean?  // If not in new reviews.json, remove or make nullable
+  legitimacy_score   Float?    // If not in new reviews.json, remove or make nullable
+  spam_flag          Boolean?  // If not in new reviews.json, remove or make nullable
+  ai_analysis        String?   // If not in new reviews.json, remove or make nullable
 
   productId Int?
   product   Product? @relation(fields: [productId], references: [id])
 
   userId Int?
-  user   User? @relation(fields: [userId], references: [id])
+  user   User?    @relation(fields: [userId], references: [id])
 
   @@map("reviews")
 }

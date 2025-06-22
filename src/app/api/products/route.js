@@ -1,13 +1,25 @@
 // src/app/api/products/route.js
 import { NextResponse } from 'next/server';
-import prisma from 'C:/Users/Admin/Downloads/new/trust_guard/src/lib/prsima'; // Adjust the path as needed
+// Ensure this import is correct (direct instantiation if alias/relative still failing)
+import { PrismaClient } from '@prisma/client';
+
+let prisma;
+if (process.env.NODE_ENV === 'production') {
+  prisma = new PrismaClient();
+} else {
+  if (!global._prismaProductListRouteInstance) { 
+    global._prismaProductListRouteInstance = new PrismaClient();
+  }
+  prisma = global._prismaProductListRouteInstance;
+}
 
 const formatPrice = (price) => {
   if (price === null || typeof price === 'undefined') return 'N/A';
   return `₹${Number(price).toLocaleString('en-IN', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
 };
 
-export async function GET(request) { // No 'context' or '{ params }' needed here for this route
+export async function GET(request) {
+  // console.log("API_PRODUCTS_ROUTE: Received GET request."); // Keep for debugging if needed
   try {
     const { searchParams } = new URL(request.url);
     const query = searchParams.get('q');
@@ -22,19 +34,17 @@ export async function GET(request) { // No 'context' or '{ params }' needed here
       ];
     }
     if (categoryFilter) {
-        // Ensure categoryFilter is not empty before adding to whereClause
-        if (whereClause.OR && categoryFilter) { // If OR exists, add category as an AND condition
+        if (whereClause.OR && categoryFilter) {
             whereClause.AND = [
-                ...(whereClause.AND || []), // Keep existing AND conditions if any
-                { OR: whereClause.OR }, // Wrap existing OR
+                ...(whereClause.AND || []),
+                { OR: whereClause.OR },
                 { category: { equals: categoryFilter, mode: 'insensitive' } }
             ];
-            delete whereClause.OR; // Remove top-level OR as it's now nested
-        } else if (categoryFilter) { // If only category filter
+            delete whereClause.OR; 
+        } else if (categoryFilter) {
             whereClause.category = { equals: categoryFilter, mode: 'insensitive' };
         }
     }
-
 
     const productsFromDb = await prisma.product.findMany({
       where: whereClause,
@@ -56,14 +66,14 @@ export async function GET(request) { // No 'context' or '{ params }' needed here
       price: formatPrice(p.price),
       price_numeric: p.price,
       rating: p.average_rating || 0,
-      reviews: p.rating_number || 0,
-      image: p.image_url || 'https://via.placeholder.com/300x300.png?text=No+Image',
+      reviews: p.rating_number || 0, 
+      image: p.image_url || null, // Ensures null is sent if DB field is null/empty
       category: p.category,
     }));
 
     return NextResponse.json(productList);
   } catch (error) {
-    console.error("Failed to fetch products (list):", error); // Clarified log
+    console.error("API_PRODUCTS_ROUTE: Failed to fetch products (list):", error);
     return NextResponse.json({ message: 'Failed to fetch products', error: error.message }, { status: 500 });
   }
 }
