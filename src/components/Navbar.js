@@ -2,7 +2,7 @@
 'use client';
 import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
-import { useCart } from 'C:/Users/Admin/Downloads/new/trust_guard/src/context/CartContext';
+import { useCart } from '../context/CartContext';
 import { ShoppingBagIcon } from '@heroicons/react/24/outline';
 
 // Simple debounce function (if you choose to use it here)
@@ -30,7 +30,7 @@ export default function Navbar({ onSearch }) {
     const term = e.target.value;
     setInputValue(term);
     if (onSearch) {
-        onSearch(term);
+      onSearch(term);
     }
   };
 
@@ -59,7 +59,7 @@ export default function Navbar({ onSearch }) {
           </Link>
           {cartCount > 0 && (
             <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center pointer-events-none">
-                {cartCount}
+              {cartCount}
             </span>
           )}
         </div>

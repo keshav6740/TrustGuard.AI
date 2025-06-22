@@ -5,8 +5,8 @@ import Image from 'next/image';
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
-import Navbar from 'C:/Users/Admin/Downloads/new/trust_guard/src/components/Navbar';
-import Footer from 'C:/Users/Admin/Downloads/new/trust_guard/src/components/Footer';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 // import { PhotoIcon } from '@heroicons/react/24/outline'; // Optional: for placeholder icon
 
 export default function Home() {
@@ -37,7 +37,7 @@ export default function Home() {
     } finally {
       setIsLoading(false);
     }
-  }, []); 
+  }, []);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -69,7 +69,7 @@ export default function Home() {
           SHOPGUARD
         </h1>
         <Image
-          src="/limited_time.gif" 
+          src="/limited_time.gif"
           alt="Sale Sticker Top Right"
           width={250}
           height={100}
@@ -80,7 +80,7 @@ export default function Home() {
      hover:scale-110"
         />
         <Image
-          src="/new.gif" 
+          src="/new.gif"
           alt="Sale Sticker Bottom Left"
           width={250}
           height={100}
@@ -92,7 +92,7 @@ export default function Home() {
         />
         <div className="relative z-30 flex flex-col items-center justify-center text-center space-y-6 pt-20 md:pt-32">
           <Image
-            src="/model.png" 
+            src="/model.png"
             alt="Model"
             width={320}
             height={340}
@@ -133,9 +133,9 @@ export default function Home() {
           {filtersOpen && (
             <ul className="space-y-3 text-sm text-gray-700">
               {['Electronics', 'Fashion and Apparel', 'Home and Kitchen', 'Health and Beauty', 'Toys and Games', 'Books and Media', 'Sports and Fitness', 'Baby and Maternity', 'Groceries and Food', 'Furniture and Home Decor', 'Smartphones'].map(category => (
-                 <li key={category} className="font-medium border rounded-2xl bg-white p-3 cursor-pointer hover:bg-gray-100" onClick={() => handleCategoryFilter(category)}>
-                    + {category}
-                 </li>
+                <li key={category} className="font-medium border rounded-2xl bg-white p-3 cursor-pointer hover:bg-gray-100" onClick={() => handleCategoryFilter(category)}>
+                  + {category}
+                </li>
               ))}
             </ul>
           )}
@@ -145,16 +145,16 @@ export default function Home() {
           {(currentSearchTerm || currentCategory) && (
             <div className="mb-4 text-center text-gray-600">
               Showing results for:
-              {currentSearchTerm && <span className="font-semibold"> "{currentSearchTerm}"</span>}
+              {currentSearchTerm && <span className="font-semibold">&quot;{currentSearchTerm}&quot;</span>}
               {currentSearchTerm && currentCategory && <span> in </span>}
-              {currentCategory && <span className="font-semibold"> category "{currentCategory}"</span>}
+              {currentCategory && <span className="font-semibold"> category &quot;{currentCategory}&quot;</span>}
             </div>
           )}
-          
+
           {isLoading && <p className="text-center py-10">Loading products...</p>}
           {error && <p className="text-center text-red-500 py-10">Error: {error}</p>}
-          {!isLoading && !error && products.length === 0 && <p className="text-center py-10">No products found for "{currentSearchTerm || currentCategory}". Try a different search or category.</p>}
-          
+          {!isLoading && !error && products.length === 0 && <p className="text-center py-10">No products found for &quot;{currentSearchTerm || currentCategory}&quot;. Try a different search or category.</p>}
+
           {!isLoading && !error && products.length > 0 && (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {products.map((p, index) => {
@@ -169,7 +169,7 @@ export default function Home() {
                           fill
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           className="object-cover"
-                          priority={index < 3} 
+                          priority={index < 3}
                         />
                       </div>
                       <div className="p-4 flex flex-col flex-grow">

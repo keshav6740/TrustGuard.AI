@@ -1,7 +1,7 @@
 // src/app/layout.js
 import { Inter, Fira_Code } from 'next/font/google'; // Import standard Google Fonts
 import "./globals.css";
-import { CartProvider } from "C:/Users/Admin/Downloads/new/trust_guard/src/context/CartContext";
+import { CartProvider } from "../context/CartContext";
 
 // Configure the new fonts
 const inter = Inter({
