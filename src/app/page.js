@@ -5,8 +5,8 @@ import Image from 'next/image';
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
-import Navbar from 'C:/Users/Admin/Downloads/new/trust_guard/src/components/Navbar';
-import Footer from 'C:/Users/Admin/Downloads/new/trust_guard/src/components/Footer';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 // import { PhotoIcon } from '@heroicons/react/24/outline'; // Optional: for placeholder icon
 
 export default function Home() {
