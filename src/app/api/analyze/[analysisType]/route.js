@@ -1,48 +1,44 @@
 // src/app/api/analyze/[analysisType]/route.js
 import { NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client'; // Import directly
+import { PrismaClient } from '@prisma/client';
 import Together from 'together-ai';
 
-// Instantiate Prisma Client directly in this file
 let prisma;
 if (process.env.NODE_ENV === 'production') {
   prisma = new PrismaClient();
 } else {
-  if (!global._prismaAnalyzeInstance) { // Unique global variable for this route
+  if (!global._prismaAnalyzeInstance) {
     global._prismaAnalyzeInstance = new PrismaClient();
   }
   prisma = global._prismaAnalyzeInstance;
 }
-// End of direct Prisma Client instantiation
 
 const together = process.env.TOGETHER_API_KEY 
     ? new Together({ apiKey: process.env.TOGETHER_API_KEY })
     : null;
 
 if (!together && process.env.NODE_ENV === 'development') {
-    console.warn("API_ANALYZE_ROUTE: TOGETHER_API_KEY not found in .env. LLM features will use mocks.");
+    console.warn("API_ANALYZE_ROUTE (Corrected Schema): TOGETHER_API_KEY not found. LLM features will use mocks.");
 }
 
-// Helper function for simple text analysis
 function analyzeReviewText(text) {
     let flags = [];
     if (!text || typeof text !== 'string') return flags; 
-    if (text.length < 50) flags.push("Very short text");
-    if (text.toLowerCase().includes("amazing product") || text.toLowerCase().includes("best ever")) flags.push("Generic positive praise");
-    if (text.toLowerCase().includes("terrible") || text.toLowerCase().includes("worst product")) flags.push("Generic negative sentiment");
-    if (text.toUpperCase() === text && text.length > 20) flags.push("All caps text detected");
-    if ((text.match(/[!?.]{3,}/g) || []).length > 0) flags.push("Excessive punctuation detected");
+    if (text.length < 50) flags.push("Short review text");
+    if (text.toLowerCase().includes("amazing product") || text.toLowerCase().includes("best ever") || text.toLowerCase().includes("highly recommend")) flags.push("Contains generic positive phrases");
+    if (text.toLowerCase().includes("terrible") || text.toLowerCase().includes("worst product") || text.toLowerCase().includes("do not buy")) flags.push("Contains generic negative phrases");
+    if (text.toUpperCase() === text && text.length > 20) flags.push("Review text is all caps");
+    if ((text.match(/[!?.]{3,}/g) || []).length > 0) flags.push("Review text has excessive punctuation");
     return flags;
 }
 
-export async function POST(request, { params }) { // Standard: Destructure params
+export async function POST(request, { params }) { 
   let queryProductId; 
   let analysisTypeFromParams;
   
-  console.log(`API_ANALYZE_ROUTE: Destructured params received: ${JSON.stringify(params)}`);
-
+  console.log(`API_ANALYZE_ROUTE (Corrected Schema): Destructured params received: ${JSON.stringify(params)}`);
   try {
-    analysisTypeFromParams = params?.analysisType; // Access analysisType from destructured params
+    analysisTypeFromParams = params?.analysisType; 
 
     if (!analysisTypeFromParams) {
         console.error("API_ANALYZE_ROUTE: Analysis type parameter is missing from destructured params:", params);
@@ -52,225 +48,210 @@ export async function POST(request, { params }) { // Standard: Destructure param
     const body = await request.json();
     queryProductId = body.productId; 
 
-    const productId = parseInt(queryProductId, 10);
-    if (isNaN(productId)) {
-        return NextResponse.json({ message: 'Invalid product ID for analysis' }, { status: 400 });
+    let itemProductNo;
+    try {
+        itemProductNo = BigInt(queryProductId);
+    } catch(e) {
+        console.error("API_ANALYZE_ROUTE: Invalid product_no format for analysis:", queryProductId);
+        return NextResponse.json({ message: 'Invalid product ID' }, { status: 400 });
     }
 
     if (!prisma) {
       console.error("API_ANALYZE_ROUTE: CRITICAL - Prisma client is not initialized!");
       return NextResponse.json({ message: 'Database client not initialized' }, { status: 500 });
     }
-    console.log(`API_ANALYZE_ROUTE: Fetching product ID ${productId} for analysis type ${analysisTypeFromParams}`);
+    console.log(`API_ANALYZE_ROUTE: Fetching item with product_no ${itemProductNo} for analysis type ${analysisTypeFromParams}`);
 
-    const product = await prisma.product.findUnique({
-        where: { id: productId },
+    const item = await prisma.items.findUnique({
+        where: { product_no: itemProductNo },
         include: { 
-            seller: true, 
-            reviews: {     
-                include: { user: true },
-                orderBy: { time: 'desc' }, 
-                take: 20, 
+            Sellers: true, 
+            Reviews: {    
+                include: { Users: true },
+                orderBy: { review_id: 'desc' }, 
+                take: 20,
             },
         }
     });
 
-    if (!product) {
-        console.log(`API_ANALYZE_ROUTE: Product not found for ID: ${productId}`);
+    if (!item) {
+        console.log(`API_ANALYZE_ROUTE: Item not found for product_no: ${itemProductNo}`);
         return NextResponse.json({ message: 'Product not found for analysis' }, { status: 404 });
     }
-    console.log(`API_ANALYZE_ROUTE: Product found: ${product.title} for analysis.`);
+    console.log(`API_ANALYZE_ROUTE: Item found: ${item.title} for analysis.`);
 
     let analysisResult = {};
 
     switch (analysisTypeFromParams) {
       case 'fraud-detection':
-        let fraudRiskScore = 30; 
-        let fraudDetails = [];
-        if (!product.seller) {
-            fraudRiskScore += 20;
-            fraudDetails.push("Seller information is missing or not linked.");
+        let fraudRiskScore = 20; 
+        let fraudDetails = [`Analyzing product: "${item.title}" by seller "${item.Sellers?.seller_name || 'Unknown Seller'}"`];
+        if (!item.Sellers) {
+            fraudRiskScore += 30;
+            fraudDetails.push("Seller information is not linked to this product (High Risk).");
         } else {
-            if (!product.seller.is_verified) {
+            if (item.Sellers.is_verified === false) {
                 fraudRiskScore += 25;
-                fraudDetails.push("Seller is not verified.");
+                fraudDetails.push("Seller is not verified (Increased Risk).");
+            } else if (item.Sellers.is_verified === true) {
+                fraudDetails.push("Seller is verified (Positive Indicator).");
             }
-            if (product.seller.trust_score !== null && product.seller.trust_score < 75) { 
-                fraudRiskScore += Math.max(0, (75 - product.seller.trust_score));
-                fraudDetails.push(`Seller has a relatively low trust score (${product.seller.trust_score}).`);
-            }
-            if (product.seller.total_products < 2 && (product.seller.trust_score === null || product.seller.trust_score < 80)) {
-                 fraudRiskScore += 10;
-                 fraudDetails.push("Seller has very few products listed and a moderate/unknown trust score.");
+            if (item.Sellers.total_products !== null && Number(item.Sellers.total_products) < 5) {
+                 fraudRiskScore += 15;
+                 fraudDetails.push(`Seller has few products listed (${item.Sellers.total_products}) (Moderate Risk).`);
             }
         }
-        if (product.fake_review_percentage !== null && product.fake_review_percentage > 20) {
-            fraudRiskScore += Math.max(0, product.fake_review_percentage / 2);
-            fraudDetails.push(`Product has a high suspected fake review percentage (${product.fake_review_percentage}%).`);
-        }
-        if (product.price < 500 && product.average_rating !== null && product.average_rating > 4.8 && (product.rating_number || 0) < 10) {
-            fraudRiskScore += 15;
-            fraudDetails.push("Unusually high rating for a low-priced item with few reviews, potential for manipulation.");
+        if (item.price !== null && Number(item.price) < 500 && item.rating !== null && item.rating > 4.8 && (Number(item.rating_number) || 0) < 10) {
+            fraudRiskScore += 20;
+            fraudDetails.push("Item has an unusually high rating for a low price with very few reviews (Potential Manipulation).");
+        } else if (item.rating !== null && item.rating < 2.5 && (Number(item.rating_number) || 0) > 10) {
+            fraudRiskScore += 10;
+            fraudDetails.push("Item has a significantly low average rating based on several reviews (Indicates Product Issues).");
         }
         fraudRiskScore = Math.min(Math.max(Math.round(fraudRiskScore), 5), 95); 
         analysisResult = {
           title: "Fraud Potential Assessment",
-          summary: `Based on available data, the estimated fraud potential score for listings of "${product.title}" by seller "${product.seller?.seller_name || 'Unknown'}" is ${fraudRiskScore}/100.`,
+          summary: `The estimated fraud potential score is ${fraudRiskScore}/100. ${fraudRiskScore > 60 ? 'Higher risk detected.' : (fraudRiskScore > 30 ? 'Moderate risk factors present.' : 'Lower risk profile.')}`,
           riskScore: fraudRiskScore,
-          details: fraudDetails.length > 0 ? fraudDetails : ["No specific high-risk fraud indicators found based on current simple checks."],
+          details: fraudDetails,
         };
         break;
 
       case 'counterfeit-detection':
-        let authenticityConfidence = 70; 
-        let counterfeitIndicators = [];
-        if (product.verified_product) { 
-            authenticityConfidence += 25;
-        } else {
-            authenticityConfidence -= 15;
-            counterfeitIndicators.push("Product is not marked as 'verified' in our system.");
-        }
-        if (product.seller) {
-            if (product.seller.is_verified) {
-                authenticityConfidence += 10;
-            } else {
-                 counterfeitIndicators.push("Seller is not a verified entity.");
-            }
-            const brandNameFromDetails = typeof product.details === 'object' && product.details !== null && product.details.brand ? String(product.details.brand).toLowerCase() : "___NO_BRAND___";
-            if (product.seller.seller_name.toLowerCase().includes("official") || product.seller.seller_name.toLowerCase().includes(brandNameFromDetails)) {
-                authenticityConfidence += 5;
-            } else {
-                 counterfeitIndicators.push("Seller name does not obviously indicate an official brand store.");
-            }
-        } else {
-             counterfeitIndicators.push("Seller information not available to assess authenticity.");
-        }
-        const typicalPriceRanges = { "Electronics": 10000, "Fashion and Apparel": 2000, "Home and Kitchen": 3000, "Books and Media": 500, "Toys and Games": 1000 };
-        const typicalPrice = typicalPriceRanges[product.category];
-        if (typicalPrice && product.price < typicalPrice * 0.5) {
+        let authenticityConfidence = 60; 
+        let counterfeitIndicators = [`Analyzing product: "${item.title}"`];
+        if (item.verified_product === true) {
+            authenticityConfidence += 30;
+            counterfeitIndicators.push("Product is marked as 'verified' (Strong Positive Indicator).");
+        } else if (item.verified_product === false) {
             authenticityConfidence -= 20;
-            counterfeitIndicators.push(`Product price (₹${product.price.toLocaleString()}) is significantly lower than typical for ${product.category}, which can be an indicator.`);
+            counterfeitIndicators.push("Product is NOT marked as 'verified' (Caution Advised).");
         }
-        counterfeitIndicators.push("Visual counterfeit scan (simulated): No obvious logo/packaging mismatches detected in primary image based on current data.");
+        if (item.Sellers) {
+            if (item.Sellers.is_verified === true) {
+                authenticityConfidence += 10;
+                counterfeitIndicators.push("Sold by a verified seller (Positive Indicator).");
+            }
+            const brandNameInSeller = item.title?.split(' ')[0].toLowerCase();
+            if (item.Sellers.seller_name?.toLowerCase().includes("official") || item.Sellers.seller_name?.toLowerCase().includes(brandNameInSeller)) {
+                authenticityConfidence += 5;
+                counterfeitIndicators.push("Seller name suggests official or brand association (Mild Positive).");
+            }
+        } else {
+             authenticityConfidence -=10;
+             counterfeitIndicators.push("Seller information is not available.");
+        }
+        const descriptionTextForCounterfeit = item.description || "";
+        if (descriptionTextForCounterfeit.toLowerCase().includes("replica") || descriptionTextForCounterfeit.toLowerCase().includes("inspired by") || descriptionTextForCounterfeit.toLowerCase().includes("1:1")) {
+            authenticityConfidence -= 40;
+            counterfeitIndicators.push("Description contains terms often associated with replicas (High Risk of Counterfeit).");
+        }
+        // Example: Very cheap electronics
+        const typicalPriceRanges = { "Electronics": 10000, "Smartphones": 15000, "Laptops": 40000 }; 
+        const typicalPrice = typicalPriceRanges[item.category];
+        if (typicalPrice && item.price !== null && Number(item.price) < typicalPrice * 0.3) { // More aggressive check
+             authenticityConfidence -= 25;
+             counterfeitIndicators.push(`Price (₹${Number(item.price).toLocaleString()}) is extremely low for its category (High Counterfeit Risk).`);
+        }
         authenticityConfidence = Math.min(Math.max(Math.round(authenticityConfidence), 5), 98);
         analysisResult = {
           title: "Counterfeit Likelihood Report",
-          summary: `The estimated authenticity confidence for "${product.title}" is ${authenticityConfidence}%.`,
+          summary: `Estimated authenticity confidence: ${authenticityConfidence}%. ${authenticityConfidence < 40 ? 'High counterfeit risk detected.' : (authenticityConfidence < 60 ? 'Moderate counterfeit risk indicators present.' : 'Standard checks passed.')}`,
           authenticityConfidence: authenticityConfidence,
-          indicators: counterfeitIndicators.length > 0 ? counterfeitIndicators : ["Primary checks suggest authenticity, but detailed visual/supply chain verification is recommended for high-value items."],
+          indicators: counterfeitIndicators,
         };
         break;
 
       case 'fake-review-analysis':
         let currentSuspiciousReviewCount = 0;
-        let totalReviewsForAnalysis = product.reviews.length;
+        let totalReviewsForAnalysis = item.Reviews.length;
         let reviewAnalysisPatternsSet = new Set(); 
         if (totalReviewsForAnalysis === 0) {
             reviewAnalysisPatternsSet.add("No reviews available for detailed heuristic analysis.");
         } else {
-            product.reviews.forEach(review => {
+            item.Reviews.forEach(review => {
                 let reviewFlagsCount = 0; 
-                if (review.user) {
-                    if (review.user.join_date && new Date(review.user.join_date) > new Date(new Date().setMonth(new Date().getMonth() - 3))) { 
+                if (review.Users) { // Check if user data is linked
+                    if (review.Users.total_reviews !== null && Number(review.Users.total_reviews) < 2) { 
                         reviewFlagsCount++;
-                        reviewAnalysisPatternsSet.add("Some reviews from recently joined users.");
+                        reviewAnalysisPatternsSet.add("Some reviews from users with very few prior reviews.");
                     }
-                    if (review.user.total_reviews < 3) {
-                        reviewFlagsCount++;
-                        reviewAnalysisPatternsSet.add("Some reviews from users with very few total reviews posted.");
-                    }
-                    if (review.user.trust_score !== null && review.user.trust_score < 0.3) { 
-                        reviewFlagsCount +=2;
-                        reviewAnalysisPatternsSet.add("Some reviews from users with low overall trust scores.");
-                    }
+                    // Your new Users schema does not have join_date or trust_score.
+                    // If you add them back, you can use them here.
                 } else {
-                    reviewAnalysisPatternsSet.add("Some reviews lack detailed reviewer profile information for deeper analysis.");
+                    reviewAnalysisPatternsSet.add("Some reviews lack linked user profile data.");
                 }
-                const textAnalysisFlags = analyzeReviewText(review.text);
+                const textAnalysisFlags = analyzeReviewText(review.text || "");
                 if (textAnalysisFlags.length > 0) {
                     reviewFlagsCount += textAnalysisFlags.length;
                     textAnalysisFlags.forEach(flag => reviewAnalysisPatternsSet.add(flag));
                 }
-                if (review.verified_purchase === false) { 
-                    reviewFlagsCount++;
-                    reviewAnalysisPatternsSet.add("Some reviews are not from verified purchases.");
-                }
-                if (review.helpful_vote !== null && review.helpful_vote < 2 && totalReviewsForAnalysis > 5) { 
+                if (review.helpful_vote !== null && Number(review.helpful_vote) === 0 && totalReviewsForAnalysis > 10) { 
                     reviewFlagsCount += 0.5;
                 }
-                if (review.legitimacy_score !== null && review.legitimacy_score < 0.70) { 
-                    reviewFlagsCount += 2;
-                    reviewAnalysisPatternsSet.add("Some reviews have low AI-assessed legitimacy scores (from dataset).");
-                }
-                if (review.spam_flag === true) { 
-                    reviewFlagsCount += 5; 
-                    reviewAnalysisPatternsSet.add("Some reviews were flagged as potential spam (from dataset).");
-                }
-                if (reviewFlagsCount >= 3) { 
+                // Your new Reviews schema might be missing verified_purchase, legitimacy_score, spam_flag.
+                // If you add them back, you can use them here.
+
+                if (reviewFlagsCount >= 2) { // Lowered threshold for suspicion
                     currentSuspiciousReviewCount++;
                 }
             });
         }
-        const dbProductFakePercentage = product.fake_review_percentage || 0;
         const heuristicFakePercentage = totalReviewsForAnalysis > 0 ? (currentSuspiciousReviewCount / totalReviewsForAnalysis) * 100 : 0;
-        const combinedSuspiciousPercentageOverall = Math.round((dbProductFakePercentage + heuristicFakePercentage) / 2);
-        const finalOverallSuspiciousCount = Math.round((product.rating_number || 0) * (combinedSuspiciousPercentageOverall / 100));
-        const finalOverallGenuineCount = (product.rating_number || 0) - finalOverallSuspiciousCount;
+        const estimatedGenuinePercentage = 100 - heuristicFakePercentage;
         analysisResult = {
-          title: "Review Authenticity Analysis",
-          summary: `Out of ${product.rating_number || 0} total reviews for "${product.title}", approximately ${finalOverallSuspiciousCount} may exhibit characteristics warranting further scrutiny. Estimated genuine reviews: ${finalOverallGenuineCount}.`,
-          estimatedGenuinePercentage: product.rating_number > 0 ? Math.max(0, Math.round((finalOverallGenuineCount / (product.rating_number || 1)) * 100)) : 100,
+          title: "Review Authenticity Heuristics",
+          summary: `Based on heuristics applied to ${totalReviewsForAnalysis} sampled reviews, ${currentSuspiciousReviewCount} exhibit some potentially suspicious characteristics. Estimated genuine reviews in sample: ${estimatedGenuinePercentage.toFixed(0)}%.`,
+          estimatedGenuinePercentage: Math.max(0, estimatedGenuinePercentage),
           suspiciousReviewsInSample: currentSuspiciousReviewCount,
           sampledReviewsAnalyzed: totalReviewsForAnalysis,
-          patterns: reviewAnalysisPatternsSet.size > 0 ? Array.from(reviewAnalysisPatternsSet) : ["No highly suspicious patterns detected in the sampled reviews based on current checks."],
-          datasetDeclaredFakeReviewPercentage: `${dbProductFakePercentage.toFixed(1)}% (as per product data).`
+          patterns: reviewAnalysisPatternsSet.size > 0 ? Array.from(reviewAnalysisPatternsSet) : ["No strong suspicious patterns detected in the sampled reviews based on current simple heuristics."],
         };
         break;
 
       case 'trust-score':
         let calculatedTrustScore = 50; 
         let scoreBreakdownDetails = {}; 
-        if (product.average_rating !== null) {
-            const ratingImpact = Math.round((product.average_rating - 2.5) * 8); 
+        if (item.rating !== null) {
+            const ratingImpact = Math.round((item.rating - 3.0) * 10);
             calculatedTrustScore += ratingImpact;
-            scoreBreakdownDetails["Average Rating"] = `${product.average_rating.toFixed(1)}★ (${ratingImpact >= 0 ? '+' : ''}${ratingImpact} pts)`;
+            scoreBreakdownDetails["Average Product Rating"] = `${item.rating.toFixed(1)}★ (${ratingImpact >= 0 ? '+' : ''}${ratingImpact} pts)`;
         }
-        if (product.rating_number !== null) {
-            const reviewVolumeImpact = Math.min(Math.round(product.rating_number / 10), 15); 
+        if (item.rating_number !== null) {
+            const reviewVolumeImpact = Math.min(Math.round(Number(item.rating_number) / 20), 15); 
             calculatedTrustScore += reviewVolumeImpact;
-            scoreBreakdownDetails["Review Volume"] = `${product.rating_number} reviews (+${reviewVolumeImpact} pts)`;
+            scoreBreakdownDetails["Number of Reviews"] = `${item.rating_number} reviews (+${reviewVolumeImpact} pts)`;
         }
-        if (product.verified_product) {
-            calculatedTrustScore += 10;
-            scoreBreakdownDetails["Product Verification"] = "Verified (+10 pts)";
+        if (item.verified_product === true) {
+            calculatedTrustScore += 15;
+            scoreBreakdownDetails["Product Verification"] = "Verified (+15 pts)";
         } else {
              scoreBreakdownDetails["Product Verification"] = "Not Verified (0 pts)";
         }
-        if (product.fake_review_percentage !== null) {
-            const fakeReviewPenalty = Math.round(product.fake_review_percentage / 2.5);
-            calculatedTrustScore -= fakeReviewPenalty;
-            scoreBreakdownDetails["Suspected Fake Reviews"] = `${product.fake_review_percentage.toFixed(1)}% (-${fakeReviewPenalty} pts)`;
-        }
-        if (product.seller) {
-            if (product.seller.trust_score !== null) {
-                const sellerTrustImpact = Math.round((product.seller.trust_score - 70) / 1.5); 
-                calculatedTrustScore += sellerTrustImpact;
-                scoreBreakdownDetails["Seller Reputation"] = `Score ${product.seller.trust_score} (${sellerTrustImpact >= 0 ? '+' : ''}${sellerTrustImpact} pts)`;
+        if (item.Sellers) {
+            if (item.Sellers.is_verified === true) {
+                calculatedTrustScore += 10;
+                scoreBreakdownDetails["Seller Verification"] = "Verified Seller (+10 pts)";
             } else {
-                scoreBreakdownDetails["Seller Reputation"] = "Score N/A";
+                 calculatedTrustScore -= 5;
+                 scoreBreakdownDetails["Seller Verification"] = "Not Verified (-5 pts)";
             }
-            if (product.seller.is_verified) {
-                calculatedTrustScore += 7;
-                scoreBreakdownDetails["Seller Verification"] = "Verified (+7 pts)";
+            if (item.Sellers.total_products !== null && Number(item.Sellers.total_products) < 3) {
+                calculatedTrustScore -= 5;
+                scoreBreakdownDetails["Seller Product Count"] = `Low (${item.Sellers.total_products}) (-5 pts)`;
             }
         } else {
-             scoreBreakdownDetails["Seller Information"] = "Unavailable (-5 pts)";
-             calculatedTrustScore -=5;
+             scoreBreakdownDetails["Seller Information"] = "Unavailable (-10 pts)";
+             calculatedTrustScore -=10;
+        }
+        if (item.rating !== null && item.rating < 2.0 && (Number(item.rating_number) || 0) > 5) {
+            calculatedTrustScore -= 15;
+            scoreBreakdownDetails["Low Rating Alert"] = "Significantly Low Rating (-15 pts)";
         }
         calculatedTrustScore = Math.min(Math.max(Math.round(calculatedTrustScore), 5), 99);
         analysisResult = {
-          title: "Overall Trust Score",
-          summary: `The TrustGuard AI has assigned an overall trust score of ${calculatedTrustScore}/100 for "${product.title}".`,
+          title: "Overall Product Trust Score",
+          summary: `The TrustGuard AI has assigned an overall trust score of ${calculatedTrustScore}/100 for "${item.title}".`,
           trustScore: calculatedTrustScore,
           breakdown: scoreBreakdownDetails,
         };
@@ -278,34 +259,30 @@ export async function POST(request, { params }) { // Standard: Destructure param
 
       case 'llm-summary':
         if (!together) {
-            analysisResult = {
-                title: "AI-Generated Product Summary (Mock)",
-                summary: `This is a mock summary for "${product.title}". The LLM service is not configured. Product seems to be a ${product.category} by ${product.seller?.seller_name || product.store_seller_name || 'Unknown Brand'}.`,
-                keywords: [product.category, "mock", "summary"],
-            };
+            analysisResult = { /* ... mock fallback ... */ };
             break; 
         }
         try {
-          console.log(`API_ANALYZE_ROUTE: Generating LLM summary for product: ${product.title}`);
-          const productDescriptionText = Array.isArray(product.description) ? product.description.join(' ') : (product.description || "No description available.");
+          console.log(`API_ANALYZE_ROUTE: Generating LLM summary for product: ${item.title}`);
+          const productDescriptionText = item.description || "No description available.";
           let reviewSnippetsText = "No recent reviews sampled for summary.";
-          if (product.reviews && product.reviews.length > 0) {
-            reviewSnippetsText = product.reviews.slice(0, 3).map(r => `- "${r.text.substring(0,150)}..." (Rating: ${r.rating})`).join('\n');
+          if (item.Reviews && item.Reviews.length > 0) {
+            reviewSnippetsText = item.Reviews.slice(0, 3).map(r => `- "${r.text ? r.text.substring(0,100) : 'Review text missing'}..." (Rating: ${r.rating || 'N/A'})`).join('\n');
           }
           const llmPrompt = `
             You are an AI assistant for an e-commerce trust platform called TrustGuard.AI.
-            Your task is to provide a concise, balanced, and strictly factual summary for the product named "${product.title}".
+            Your task is to provide a concise, balanced, and strictly factual summary for the product named "${item.title}".
             Base your summary ONLY on the information provided below. Do NOT invent features, reviews, or sentiments.
             If information is scarce, keep the summary very brief and general.
             Aim for 2-3 informative sentences. Max 100 words.
 
             Product Information:
-            - Name: ${product.title}
-            - Brand: ${product.seller?.seller_name || product.store_seller_name || 'Unknown Brand'}
-            - Category: ${product.category}
+            - Name: ${item.title}
+            - Brand: ${item.Sellers?.seller_name || 'Unknown Brand'}
+            - Category: ${item.category}
             - Description: ${productDescriptionText}
-            - Average Rating: ${product.average_rating || 'Not Rated'} stars from ${product.rating_number || 0} reviews.
-            - Price: ₹${product.price_numeric ? product.price_numeric.toLocaleString('en-IN') : 'Price not available'} 
+            - Average Rating: ${item.rating || 'Not Rated'} stars from ${Number(item.rating_number) || 0} reviews.
+            - Price: ₹${item.price ? Number(item.price).toLocaleString('en-IN') : 'Price not available'} 
             
             Recent Review Snippets (use cautiously, may not represent all reviews):
             ${reviewSnippetsText}
@@ -326,7 +303,7 @@ export async function POST(request, { params }) { // Standard: Destructure param
           analysisResult = {
             title: "AI-Generated Product Summary",
             summary: summaryText,
-            keywords: [product.category, (product.seller?.seller_name?.split(' ')[0] || product.store_seller_name?.split(' ')[0] || "product"), "summary"],
+            keywords: [item.category, (item.Sellers?.seller_name?.split(' ')[0] || "product"), "summary"],
           };
         } catch (e) {
           console.error("API_ANALYZE_ROUTE: Error calling Together AI for LLM Summary:", e);
@@ -348,7 +325,7 @@ export async function POST(request, { params }) { // Standard: Destructure param
     return NextResponse.json({ success: true, analysisType: analysisTypeFromParams, data: analysisResult });
 
   } catch (error) {
-    console.error(`API_ANALYZE_ROUTE: Failed to perform analysis for ${analysisTypeFromParams || 'unknown type'} (Product ID: ${queryProductId || 'unknown'}):`, error);
+    console.error(`API_ANALYZE_ROUTE (Corrected Schema): Failed to perform analysis for ${analysisTypeFromParams || 'unknown type'} (Product ID: ${queryProductId || 'unknown'}):`, error);
     return NextResponse.json({ message: 'Analysis failed', error: "An unexpected server error occurred." }, { status: 500 });
   }
 }

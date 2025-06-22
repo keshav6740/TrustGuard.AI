@@ -1,6 +1,5 @@
 // src/app/api/products/route.js
 import { NextResponse } from 'next/server';
-// Ensure this import is correct (direct instantiation if alias/relative still failing)
 import { PrismaClient } from '@prisma/client';
 
 let prisma;
@@ -14,12 +13,12 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 const formatPrice = (price) => {
-  if (price === null || typeof price === 'undefined') return 'N/A';
+  if (price === null || typeof price === 'undefined' || isNaN(Number(price))) return 'N/A'; // Check if Number(price) is NaN
   return `₹${Number(price).toLocaleString('en-IN', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
 };
 
 export async function GET(request) {
-  // console.log("API_PRODUCTS_ROUTE: Received GET request."); // Keep for debugging if needed
+  console.log("API_PRODUCTS_ROUTE (Corrected Schema): Received GET request.");
   try {
     const { searchParams } = new URL(request.url);
     const query = searchParams.get('q');
@@ -30,7 +29,7 @@ export async function GET(request) {
       whereClause.OR = [
         { title: { contains: query, mode: 'insensitive' } },
         { category: { contains: query, mode: 'insensitive' } },
-        { seller: { seller_name: { contains: query, mode: 'insensitive' } } },
+        { Sellers: { seller_name: { contains: query, mode: 'insensitive' } } }, 
       ];
     }
     if (categoryFilter) {
@@ -46,34 +45,38 @@ export async function GET(request) {
         }
     }
 
-    const productsFromDb = await prisma.product.findMany({
+    if (!prisma) {
+      console.error("API_PRODUCTS_ROUTE: CRITICAL - Prisma client is not initialized!");
+      return NextResponse.json({ message: 'Database client not initialized' }, { status: 500 });
+    }
+
+    const itemsFromDb = await prisma.items.findMany({
       where: whereClause,
       include: {
-        seller: {
-          select: { seller_name: true },
-        },
+        Sellers: true, // Use 'Sellers' (capital S) as per your schema
       },
       orderBy: {
-        average_rating: 'desc',
+        rating: 'desc', // Order by 'rating' field from Items model
       }
     });
+    console.log(`API_PRODUCTS_ROUTE: Found ${itemsFromDb.length} items from DB.`);
 
-    const productList = productsFromDb.map(p => ({
-      id: p.id,
-      product_no: p.product_no,
-      name: p.title,
-      brand: p.seller?.seller_name || p.store_seller_name || 'N/A',
-      price: formatPrice(p.price),
-      price_numeric: p.price,
-      rating: p.average_rating || 0,
-      reviews: p.rating_number || 0, 
-      image: p.image_url || null, // Ensures null is sent if DB field is null/empty
-      category: p.category,
+    const productList = itemsFromDb.map(item => ({
+      id: Number(item.product_no), 
+      product_no: Number(item.product_no),
+      name: item.title,
+      brand: item.Sellers?.seller_name || 'Unknown Brand', // Access via item.Sellers
+      price: formatPrice(item.price),
+      price_numeric: item.price !== null ? Number(item.price) : null, // Handle null before Number
+      rating: item.rating || 0,
+      reviews: item.rating_number !== null ? Number(item.rating_number) : 0, // Handle null
+      image: item.image || null, 
+      category: item.category,
     }));
 
     return NextResponse.json(productList);
   } catch (error) {
-    console.error("API_PRODUCTS_ROUTE: Failed to fetch products (list):", error);
+    console.error("API_PRODUCTS_ROUTE (Corrected Schema): Failed to fetch products:", error);
     return NextResponse.json({ message: 'Failed to fetch products', error: error.message }, { status: 500 });
   }
 }

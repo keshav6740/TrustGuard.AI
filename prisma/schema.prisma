@@ -1,4 +1,3 @@
-// prisma/schema.prisma
 generator client {
   provider = "prisma-client-js"
 }
@@ -8,85 +7,67 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id            Int      @id @default(autoincrement())
-  user_id_str   String   @unique @map("user_id_string") // Original user_id from json
-  username      String
-  total_reviews Int
-  join_date     DateTime? // Made optional
-  trust_score   Float?    // Made optional
-  reviews       Review[]
-
-  @@map("users")
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model Analysis {
+  analysis_id Int       @id
+  product_no  BigInt?
+  score       Float?
+  reasoning   String?
+  review_id   BigInt?
+  time        DateTime? @db.Time(6)
+  Items       Items?    @relation(fields: [product_no], references: [product_no], onDelete: Cascade, onUpdate: NoAction)
+  Reviews     Reviews?  @relation(fields: [review_id], references: [review_id], onDelete: Cascade, onUpdate: NoAction)
 }
 
-model Seller {
-  id             Int       @id @default(autoincrement())
-  seller_id_str  String    @unique @map("seller_id_string") // Original seller_id from json
-  seller_name    String    
-  total_products Int
-  is_verified    Boolean
-  trust_score    Float?    // Made optional
-  products       Product[]
-
-  @@map("sellers")
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model Items {
+  category         String?
+  title            String?
+  rating           Float?
+  rating_number    BigInt?
+  description      String?
+  price            BigInt?
+  seller_id        String?
+  product_no       BigInt     @id
+  verified_product Boolean?
+  image            String?
+  Analysis         Analysis[]
+  Sellers          Sellers?   @relation(fields: [seller_id], references: [seller_id], onDelete: Cascade, onUpdate: NoAction)
+  Reviews          Reviews[]
 }
 
-model Product {
-  id                     Int       @id @default(autoincrement())
-  product_no             Int       @unique
-  category               String
-  title                  String
-  average_rating         Float?    @map("rating") // Map to "rating" from Item.json
-  rating_number          Int?      // From Item.json "rating_number"
-  description            String?   // Now a single string, made optional
-  price                  Float
-  
-  store_seller_id_ref    String?   @map("store_seller_id_from_json") // Temp field for seeding store_seller_id
-  
-  verified_product       Boolean?
-  image_url              String?   @map("image") // Map to "image" from Item.json
-
-  // Fields from previous schema, can be removed if no longer in Item.json or defaults are fine
-  review_summary         String?   // If not in new Item.json, remove or make nullable
-  fake_review_percentage Float?    // If not in new Item.json, remove or make nullable
-  details                Json?     // If not in new Item.json, remove or make nullable
-  thumbnail_urls         String[]  @default([]) // Keep for consistency or remove
-  sizes                  String[]  @default([]) // Keep for consistency or remove
-  shipping_info          Json?     // Keep for consistency or remove
-
-  sellerId Int?     // Foreign key to Seller table's PK
-  seller   Seller?  @relation(fields: [sellerId], references: [id])
-
-  reviews Review[]
-
-  @@map("products")
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model Reviews {
+  title        String?
+  text         String?
+  product_no   BigInt?
+  user_id      String?
+  review_id    BigInt     @id
+  helpful_vote BigInt?
+  date_time    String?
+  Analysis     Analysis[]
+  Items        Items?     @relation(fields: [product_no], references: [product_no], onDelete: Cascade, onUpdate: NoAction)
+  Users        Users?     @relation(fields: [user_id], references: [user_id], onDelete: Cascade, onUpdate: NoAction)
 }
 
-model Review {
-  id                 Int      @id @default(autoincrement())
-  review_id_ref      Int?     @unique @map("review_id_from_json") // From reviews.json review_id
-  rating             Float?   // Make optional if not always present
-  title              String?
-  text               String
-  
-  product_no_ref     Int      // To link with Product.product_no during seed
-  user_id_str_ref    String   // To link with User.user_id_str during seed
-  
-  helpful_vote       Int?
-  time               DateTime // Will be parsed from date_time
-  
-  // Fields from previous schema, can be removed if no longer in reviews.json
-  verified_purchase  Boolean?  // If not in new reviews.json, remove or make nullable
-  legitimacy_score   Float?    // If not in new reviews.json, remove or make nullable
-  spam_flag          Boolean?  // If not in new reviews.json, remove or make nullable
-  ai_analysis        String?   // If not in new reviews.json, remove or make nullable
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model Sellers {
+  seller_id      String   @id
+  seller_name    String?
+  total_products BigInt?
+  is_verified    Boolean?
+  Items          Items[]
+}
 
-  productId Int?
-  product   Product? @relation(fields: [productId], references: [id])
-
-  userId Int?
-  user   User?    @relation(fields: [userId], references: [id])
-
-  @@map("reviews")
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model Users {
+  user_id       String    @id
+  username      String?
+  total_reviews BigInt?
+  Reviews       Reviews[]
 }
