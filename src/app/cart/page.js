@@ -3,9 +3,9 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Navbar from 'C:/Users/Admin/Downloads/new/trust_guard/src/components/Navbar';
-import Footer from 'C:/Users/Admin/Downloads/new/trust_guard/src/components/Footer';
-import { useCart } from 'C:/Users/Admin/Downloads/new/trust_guard/src/context/CartContext';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import { useCart } from '../context/CartContext';
 import { TrashIcon, PlusCircleIcon, MinusCircleIcon, ShoppingCartIcon } from '@heroicons/react/24/outline';
 import { useRouter } from 'next/navigation'; // <-- IMPORT useRouter
 
