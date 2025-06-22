@@ -3,9 +3,9 @@
 
 import React, { useEffect } from 'react';
 import Link from 'next/link';
-import Navbar from 'C:/Users/Admin/Downloads/new/trust_guard/src/components/Navbar';
-import Footer from 'C:/Users/Admin/Downloads/new/trust_guard/src/components/Footer';
-import { useCart } from 'C:/Users/Admin/Downloads/new/trust_guard/src/context/CartContext'; // To clear the cart after "checkout"
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import { useCart } from '../context/CartContext'; // To clear the cart after "checkout"
 import { CheckCircleIcon, ArrowLeftIcon } from '@heroicons/react/24/solid';
 
 export default function CheckoutPage() {
