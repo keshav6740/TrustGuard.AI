@@ -3,10 +3,10 @@
 
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
-import Navbar from 'C:/Users/Admin/Downloads/new/trust_guard/src/components/Navbar';
+import Navbar from '../components/Navbar';
 import { useState, useEffect } from 'react';
-import Footer from 'C:/Users/Admin/Downloads/new/trust_guard/src/components/Footer';
-import { useCart } from 'C:/Users/Admin/Downloads/new/trust_guard/src/context/CartContext';
+import Footer from '../components/Footer';
+import { useCart } from '../context/CartContext';
 import { CheckCircleIcon } from '@heroicons/react/24/solid';
 import { ShoppingBagIcon as ShoppingBagIconOutline, PhotoIcon, UserCircleIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
 
