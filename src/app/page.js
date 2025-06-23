@@ -7,6 +7,7 @@ import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { useRef } from 'react';
 // import { PhotoIcon } from '@heroicons/react/24/outline'; // Optional: for placeholder icon
 
 export default function Home() {
@@ -16,6 +17,8 @@ export default function Home() {
   const [error, setError] = useState(null);
   const [currentSearchTerm, setCurrentSearchTerm] = useState('');
   const [currentCategory, setCurrentCategory] = useState('');
+  const productSectionRef = useRef(null);
+
 
   const fetchProducts = useCallback(async (searchTerm, category) => {
     setIsLoading(true);
@@ -37,7 +40,7 @@ export default function Home() {
     } finally {
       setIsLoading(false);
     }
-  }, []); 
+  }, []);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -56,20 +59,26 @@ export default function Home() {
     setCurrentSearchTerm('');
   };
 
+  const handleExploreClick = () => {
+    if (productSectionRef.current) {
+      productSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-white text-black">
       <Navbar onSearch={handleSearchChange} />
       <section
         className="relative h-full w-full bg-slate-950 overflow-hidden
-    [background-image:radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)] py-16 md:py-24"
+    [background-image:radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)] py-2 md:py-4"
       >
         <h1 className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 
     text-[clamp(3rem,10vw,10rem)] font-extrabold tracking-tight text-white z-10 
     select-none uppercase drop-shadow-[2px_4px_4px_rgba(0,0,0,0.7)] transition-all duration-500">
-          SHOPGUARD
+          TRUSTGUARD
         </h1>
         <Image
-          src="/limited_time.gif" 
+          src="/limited_time.gif"
           alt="Sale Sticker Top Right"
           width={250}
           height={100}
@@ -80,7 +89,7 @@ export default function Home() {
      hover:scale-110"
         />
         <Image
-          src="/new.gif" 
+          src="/new.gif"
           alt="Sale Sticker Bottom Left"
           width={250}
           height={100}
@@ -90,11 +99,11 @@ export default function Home() {
      transition-transform duration-500 
      hover:scale-110"
         />
-        <div className="relative z-30 flex flex-col items-center justify-center text-center space-y-6 pt-20 md:pt-32">
+        <div className="relative z-30 flex flex-col items-center justify-center text-center space-y-6 pt-2 md:pt-4">
           <Image
-            src="/model.png" 
+            src="/model.png"
             alt="Model"
-            width={320}
+            width={350}
             height={340}
             className="rounded-2xl shadow-xl object-contain transition-transform duration-500 hover:scale-110"
           />
@@ -102,10 +111,10 @@ export default function Home() {
             <strong className="block text-white font-semibold mb-1">
               Detect Fake. Spot Risk. Shop Smart.
             </strong>
-            SHOPGUARD AI uses cutting-edge AI to analyze product listings, flag suspicious reviews, and detect potential fraud or counterfeits — empowering buyers with transparency and trust.
+            TRUSTGUARD AI uses cutting-edge AI to analyze product listings, flag suspicious reviews, and detect potential fraud or counterfeits — empowering buyers with transparency and trust.
           </p>
-          <button className="inline-flex items-center gap-2 border border-white text-white px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:bg-white hover:text-black hover:scale-105">
-            explore ⭢
+          <button onClick={handleExploreClick} className="inline-flex items-center gap-2 border border-white text-white px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:bg-white hover:text-black hover:scale-105">
+            Explore ⭢
           </button>
         </div>
       </section>
@@ -132,16 +141,16 @@ export default function Home() {
           </div>
           {filtersOpen && (
             <ul className="space-y-3 text-sm text-gray-700">
-              {['Electronics', 'Fashion and Apparel', 'Home and Kitchen', 'Health and Beauty', 'Toys and Games', 'Books and Media', 'Sports and Fitness', 'Baby and Maternity', 'Groceries and Food', 'Furniture and Home Decor', 'Smartphones'].map(category => (
-                 <li key={category} className="font-medium border rounded-2xl bg-white p-3 cursor-pointer hover:bg-gray-100" onClick={() => handleCategoryFilter(category)}>
-                    + {category}
-                 </li>
+              {['Smartphones', 'Laptops', 'Headphones', 'Smartwatches', 'Tablets', 'Televisions', 'Cameras', 'Gaming Consoles', 'Smart Home'].map(category => (
+                <li key={category} className="font-medium border rounded-2xl bg-white p-3 cursor-pointer hover:bg-gray-100" onClick={() => handleCategoryFilter(category)}>
+                  + {category}
+                </li>
               ))}
             </ul>
           )}
         </aside>
 
-        <section className="flex-1 p-6">
+        <section ref={productSectionRef} className="flex-1 p-6">
           {(currentSearchTerm || currentCategory) && (
             <div className="mb-4 text-center text-gray-600">
               Showing results for:
@@ -150,11 +159,11 @@ export default function Home() {
               {currentCategory && <span className="font-semibold"> category "{currentCategory}"</span>}
             </div>
           )}
-          
+
           {isLoading && <p className="text-center py-10">Loading products...</p>}
           {error && <p className="text-center text-red-500 py-10">Error: {error}</p>}
           {!isLoading && !error && products.length === 0 && <p className="text-center py-10">No products found for "{currentSearchTerm || currentCategory}". Try a different search or category.</p>}
-          
+
           {!isLoading && !error && products.length > 0 && (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {products.map((p, index) => {
@@ -169,7 +178,7 @@ export default function Home() {
                           fill
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           className="object-cover"
-                          priority={index < 3} 
+                          priority={index < 3}
                         />
                       </div>
                       <div className="p-4 flex flex-col flex-grow">

@@ -30,13 +30,13 @@ export default function Navbar({ onSearch }) {
     const term = e.target.value;
     setInputValue(term);
     if (onSearch) {
-        onSearch(term);
+      onSearch(term);
     }
   };
 
   return (
     <header
-      className="shadow px-6 py-4 flex justify-between items-center sticky top-0 z-40 backdrop-blur-md"
+      className="shadow px-6 py-4 flex justify-between items-center sticky top-0 z-40 backdrop-blur-md bg-[#f3edb3]"
       style={{ /* ... your existing styles ... */ }}
     >
       {/* Updated Link for TRUSTGUARD AI */}
@@ -59,7 +59,7 @@ export default function Navbar({ onSearch }) {
           </Link>
           {cartCount > 0 && (
             <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center pointer-events-none">
-                {cartCount}
+              {cartCount}
             </span>
           )}
         </div>
